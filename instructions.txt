@@ -1,0 +1,30 @@
+1.connection
+ssh limocheng@10.20.8.36
+mocheng
+
+2. upload files
+scp -r /home/lmc/CLionProjects/BlogelTest/CTLabelingBin/* limocheng@10.20.8.36:/mnt/data/lmc/BlogelTest/CTLabelingBin/
+
+scp -r /home/lmc/CLionProjects/BlogelTest/CTLabelingpruned/blogel_ctlabelingpruned.h limocheng@10.20.8.36:/mnt/data/lmc/BlogelTest/CTLabelingpruned/
+mocheng
+
+3. command
+3.1 to bin:
+	mpirun -n 10 ./run /mnt/data/zyy/Full/uk2002.graph /mnt/data/lmc/uk2002 /mnt/data/zyy/part/uk2002/p10
+
+3.2 tree label:
+	mpirun -n 10 ./run /mnt/data/lmc/uk2002 /mnt/data/lmc/uk2002_label
+
+3.3 query:
+	mpirun -n 10 ./run /mnt/data/lmc/uk2002_label /mnt/data/lmc/uk2002_query /mnt/data/zyy/part/uk2002/p10
+
+4. data file
+/mnt/data/zyy/Full/uk2002.graph
+
+5. app file 
+/mnt/data/lmc/BlogelTest/CTLabelingBin/
+
+6. upload BWorker
+scp -r /home/lmc/CLionProjects/BlogelTest/Blogel/blogel/BWorker.h limocheng@10.20.8.36:/mnt/data/lmc/BlogelTest/Blogel/blogel/
+
+7. sequence query
