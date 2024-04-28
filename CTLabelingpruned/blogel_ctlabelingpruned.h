@@ -43,43 +43,43 @@ struct CTValue//value that each edge contains, in CT this means core label and t
     vector<int> cutblock;
 };
 
-ibinstream& operator<<(ibinstream& m, const CTValue& v)
+ibinstream& operator<<(ibinstream& mstr, const CTValue& v)
 {
-    m << v.order;
-    m << v.rank;
-    m << v.f;
-    m << v.h;
-    m << v.rid;
-    m << v.rsize;
-    m << v.w;
-    m << v.nbrs;
-    m << v.cost;
-    m << v.anc;
-    m << v.dis;
-    m << v.ch;
-    m << v.cutnbrs;
-    m << v.cutblock;
-    return m;
+    mstr << v.order;
+    mstr << v.rank;
+    mstr << v.f;
+    mstr << v.h;
+    mstr << v.rid;
+    mstr << v.rsize;
+    mstr << v.w;
+    mstr << v.nbrs;
+    mstr << v.cost;
+    mstr << v.anc;
+    mstr << v.dis;
+    mstr << v.ch;
+    mstr << v.cutnbrs;
+    mstr << v.cutblock;
+    return mstr;
 }
 
-obinstream& operator>>(obinstream& m, CTValue& v)
+obinstream& operator>>(obinstream& mstr, CTValue& v)
 {
-    m >> v.order;
-    m >> v.rank;
-    m >> v.rank;
-    m >> v.f;
-    m >> v.h;
-    m >> v.rid;
-    m >> v.rsize;
-    m >> v.w;
-    m >> v.nbrs;
-    m >> v.cost;
-    m >> v.anc;
-    m >> v.dis;
-    m >> v.ch;
-    m >> v.cutnbrs;
-    m >> v.cutblock;
-    return m;
+    mstr >> v.order;
+    mstr >> v.rank;
+    mstr >> v.rank;
+    mstr >> v.f;
+    mstr >> v.h;
+    mstr >> v.rid;
+    mstr >> v.rsize;
+    mstr >> v.w;
+    mstr >> v.nbrs;
+    mstr >> v.cost;
+    mstr >> v.anc;
+    mstr >> v.dis;
+    mstr >> v.ch;
+    mstr >> v.cutnbrs;
+    mstr >> v.cutblock;
+    return mstr;
 }
 
 
@@ -105,7 +105,8 @@ public:
 class CTBlockWorker : public BWorker<CTBlock> {
     char buf[1000];
     int max_w, n_threads;
-    int n, m, n_core, m_core;
+    int global_n, n, n_core;
+    long long global_m, m, m_core;
     vector<int> score, _score, ord;
     vector<vector<int>> nbr, cost;
     vector<vector<pair<int, int>>> E;//<order, dis>
@@ -145,7 +146,6 @@ public:
         omp_set_num_threads(n_threads);
         double t = omp_get_wtime();
         this->max_w = max_w;
-        n = vertexes.size();
 
         score.resize(n);
         _score.resize(n);
@@ -374,14 +374,17 @@ public:
 
         n_core = 0;
         m_core = 0;
-        for(int u = 0; u < n; ++u)
-            if( vertexes[u]->value().rank == -1 ) {//-1 means core node
+        for(int u = 0; u < n; ++u) {
+            if (vertexes[u]->value().rank == -1) {//-1 means core node
                 ++n_core;
-                m_core += (int) E[u].size();
+                m_core += E[u].size() + vertexes[u]->value().cutnbrs.size();
             }
+        }
+        n_core = all_sum(n_core);
+        m_core = all_sum_LL(m_core);
         if(get_worker_id() == MASTER_RANK) {
             printf("%d Reducing finished, t=%0.3lf secs\nn_core=%d,m_core=%lld,node_rate=%0.3lf,edge_rate=%0.3lf\n",
-                   _my_rank, omp_get_wtime() - t, n_core, m_core, n_core * 1.0 / n, m_core * 1.0 / m);
+                   _my_rank, omp_get_wtime() - t, n_core, m_core, n_core * 1.0 / global_n, m_core * 1.0 / global_m);
         }
 
         MPI_Barrier(MPI_COMM_WORLD);
@@ -499,12 +502,16 @@ public:
     void construct_hops(int u, vector<pair<int, int>>& hops, vector<pair<int, int>>& bucket, deque<queue_info>& q){
 
         q.push_back({u, -1, 0, 0});
+        int nb_greatest = 0;
+
         while(!q.empty()) {
             int cur = q.front().idx;
             int f_idx = q.front().f_idx;
             int depth = q.front().depth;
             int _cost = q.front().cost;
             q.pop_front();
+
+            if(depth > 0 && _cost >= nb_greatest) continue;
 
             int start = hops.size();
             hops.resize(start + nbr[cur].size());
@@ -513,6 +520,7 @@ public:
                 if (nbr[cur][i] != f_idx) {
                     hops[start+i].first = nbr[cur][i];
                     hops[start+i].second =  _cost + cost[cur][i];
+                    if(depth == 0 && nb_greatest < hops[start+i].second)  nb_greatest = hops[start+i].second;
                     if(depth < PRUNEHOP) q.push_back({nbr[cur][i], cur, hops[start+i].second , depth+1});
                 }
             }
@@ -522,10 +530,10 @@ public:
     }
 
 
-    void remove_redundant_edges(VertexContainer& vertexes){//remove edges that are longer than other route
+    void remove_redundant_edges_nbr(VertexContainer& vertexes){//remove edges that are longer than other route
         if(get_worker_id() == MASTER_RANK) cout << "removing redundant edges..." << endl;
-        int ori_edge_cnt = 0;
-        int removed_cnt = 0;
+        long long ori_core_edge = 0;
+        long long removed_cnt = 0;
 
         //start
         double construct_t = 0;
@@ -534,26 +542,29 @@ public:
         double t = omp_get_wtime();
         vector<pair<int, int>> hop_label;//idx, cost
         vector<pair<int, int>> bucket;//start, end
+        deque<queue_info> q;
 
         //for debug usage
         int max_hop_nb_cnt = 0;
         int max_bucket_cnt = 0;
         int max_circles = 0;
         int max_cnt = 0;
-        int one_edge = 0;
-        int edgec = 0;
-        for (int i = 0; i < nbr.size(); ++i) {
-            edgec +=  nbr.size();
-            for (int j = 0; j < nbr[i].size(); ++j) {
+        int max_mem = 0;
+        long long one_edge = 0;
+        long long edgec = 0;
+        long long cutc = 0;
+        for (auto i = 0; i < nbr.size(); ++i) {
+            edgec +=  nbr[i].size();
+            for (auto j = 0; j < nbr[i].size(); ++j) {
                 if(cost[i][j] == 1) one_edge++;
             }
         }
-        cout << get_worker_id() << " total edge count=" << edgec << " one dis edge count=" << one_edge << " percentage=" << one_edge * 100.0 / edgec << endl;
+        if(get_worker_id() == MASTER_RANK)
+            cout << get_worker_id() << " total edge count=" << edgec << " one dis edge count=" << one_edge << " percentage=" << one_edge * 100.0 / edgec << "%" << endl;
+        MPI_Barrier(MPI_COMM_WORLD);
         one_edge = 0;
         //--------------
 
-        int max_mem = 0;
-        deque<queue_info> q;
 
 
 //#pragma omp parallel
@@ -611,7 +622,7 @@ public:
                 cacu_t += omp_get_wtime() - cacu_t0;
 
                 double update_t0 = omp_get_wtime();
-                ori_edge_cnt += nbr[i].size();
+                ori_core_edge += nbr[i].size();
                 vector<int> new_nbr;
                 vector<int> new_cost;
                 for (int k = 0; k < valid.size(); ++k) {
@@ -630,7 +641,7 @@ public:
                     cout << get_worker_id() << " " << i << " vertexes updated, "
                          << omp_get_wtime() - t << "s consumed, "
                          << removed_cnt << " edges removed, about "
-                         << removed_cnt * 100.0 / ori_edge_cnt << "% "
+                         << removed_cnt * 100.0 / ori_core_edge << "% "
                          << " construct " << construct_t << "s, "
                          << " cacu " << cacu_t << "s, "
                          << " update " << update_t << "s, "
@@ -642,12 +653,234 @@ public:
                 }
             }
 //        }
+        removed_cnt = all_sum_LL(removed_cnt);
+        ori_core_edge = all_sum_LL(ori_core_edge);
+        one_edge = all_sum_LL(one_edge);
         if(get_worker_id() == MASTER_RANK) {
             cout << get_worker_id() << " Removing redundant edge finished, t=" << omp_get_wtime() - t
                 << " secs. Removed edge cnt " << removed_cnt
-                << ", rest " << (ori_edge_cnt - removed_cnt) * 100.0 / ori_edge_cnt << "%" << endl;
-            cout << "original edge cnt = " << m << " reduced edge cnt=" << ori_edge_cnt << endl;
-            cout << "one distance edge cnt = " << one_edge << " percentage=" << one_edge * 100.0 / ori_edge_cnt << "%" << endl;
+                << ", rest " << (ori_core_edge - removed_cnt) * 100.0 / ori_core_edge << "%" << endl;
+            cout << "rest edge pnt " <<  (global_m - removed_cnt) * 100.0 / global_m << endl;
+            cout << "original edge cnt = " << global_m << " reduced edge cnt=" << ori_core_edge << endl;
+            cout << "one distance edge cnt = " << one_edge << " percentage=" << one_edge * 100.0 / ori_core_edge << "%" << endl;
+        }
+    }
+
+    void construct_hops_E(int u, vector<pair<int, int>>& hops, vector<pair<int, int>>& bucket, deque<queue_info>& q){
+        int ori_depth = 1;
+        q.push_back({u, -1, 0, ori_depth});
+        int nb_greatest = 0;
+
+        while(!q.empty()) {
+            int cur = q.front().idx;
+            int f_idx = q.front().f_idx;
+            int depth = q.front().depth;
+            int _cost = q.front().cost;
+            q.pop_front();
+
+            if(depth > ori_depth && _cost >= nb_greatest) continue;
+
+            int start = hops.size();
+            hops.resize(start + E[cur].size());
+            //push current layer
+            for (int i = 0; i < E[cur].size(); ++i) {
+                if (E[cur][i].first != f_idx) {
+                    hops[start+i].first = E[cur][i].first;
+                    hops[start+i].second =  _cost + E[cur][i].second;
+                    if(depth == ori_depth && nb_greatest < hops[start+i].second)  nb_greatest = hops[start+i].second;
+                    if(depth < PRUNEHOP) q.push_back({E[cur][i].first, cur, hops[start+i].second , depth+1});
+                }
+            }
+            int end = hops.size();
+            bucket.push_back(make_pair(start, end));//current layer's position in hop list
+        }
+    }
+
+    void construct_flags_E(int u, vector<pair<int, int>>& hops, vector<bool>& flags, deque<queue_info>& q){
+        int ori_depth = 1;
+        q.push_back({u, -1, 0, ori_depth});
+        int nb_greatest = 0;
+
+        hops.resize(E[u].size());
+        for (int i = 0; i < E[u].size(); ++i) {
+            hops[i].first = E[u][i].first;
+            hops[i].second = E[cur][i].second;
+            if(nb_greatest < hops[i].second)  nb_greatest = hops[i].second;
+            if(depth < PRUNEHOP) q.push_back({E[u][i].first, cur, hops[start+i].second , depth+1});
+        }
+
+        while(!q.empty()) {
+            int cur = q.front().idx;
+            int f_idx = q.front().f_idx;
+            int depth = q.front().depth;
+            int _cost = q.front().cost;
+            q.pop_front();
+
+            if(depth > ori_depth && _cost >= nb_greatest) continue;
+
+            //check current layer
+            int itr = 0;
+            for (int i = 0; i < E[cur].size(); ++i) {
+                if (E[cur][i].first != f_idx) {
+                    int first = E[cur][i].first;
+                    int second = _cost + E[cur][i].second;
+                    while(itr < hops.size() && (hops[itr].first < first || !flags[itr])) itr++;
+                    if(itr >= hops.size()) break;
+                    if(hops[itr].first == first && hops[itr].second <= second){//closer route
+                        flags[itr] = false;//mark updated
+                        if(hops[itr].second == nb_greatest){//update the longest neighbor
+                            nb_greatest = -1;
+                            for (int j = 0; j < hops.size(); ++j)
+                                if(flags[itr] && nb_greatest < hops[j].second)
+                                    nb_greatest = hops[j].second;
+                        }
+                    }
+                    if(depth < PRUNEHOP) //push next hop nbrs
+                        q.push_back({E[cur][i].first, cur, hops[start+i].second , depth+1});
+                }
+            }
+        }
+    }
+
+    void remove_redundant_edges_E(VertexContainer& vertexes){//remove edges that are longer than other route
+        if(get_worker_id() == MASTER_RANK) cout << "removing redundant E edges..." << endl;
+        long long ori_core_edge = 0;
+        long long removed_cnt = 0;
+
+        //start
+        double construct_t = 0;
+        double cacu_t = 0;
+        double update_t = 0;
+        double t = omp_get_wtime();
+
+        //for debug usage
+        int max_hop_nb_cnt = 0;
+        int max_bucket_cnt = 0;
+        int max_circles = 0;
+        int max_cnt = 0;
+        int max_mem = 0;
+        int circle_cnt = 0;
+        long long one_edge = 0;
+        long long new_core_edge = 0;
+        long long cut_edge = 0;
+        //--------------
+
+        vector<vector<pair<int, int>>> new_E;
+        new_E.resize(E.size());
+
+#pragma omp parallel
+        {
+            int pid = omp_get_thread_num(), np = omp_get_num_threads();
+            vector<pair<int, int>> hop_label;//idx, cost
+            vector<pair<int, int>> bucket;//start, end
+            deque<queue_info> q;
+
+            #pragma omp for schedule(dynamic)
+            for (int i = 0; i < E.size(); ++i) {//each vertex
+                if (vertexes[i]->value().rank >= 0) {
+                    continue;
+                }
+                if(pid == 0) circle_cnt++;
+                //construct N-hop list for all neighbors of x
+                double construct_t0 = omp_get_wtime();
+                hop_label.clear();
+                bucket.clear();
+                q.clear();
+//                construct_hops_E(i, hop_label, bucket, q);//source vertex, stored vector
+                if (pid == 0 && max_mem < hop_label.size()) max_mem = hop_label.size();
+                if(pid == 0) construct_t += omp_get_wtime() - construct_t0;
+
+                double cacu_t0 = omp_get_wtime();
+                vector<bool> valid(E[i].size(), true);
+                construct_flags_E(i, hop_label, valid, q);
+//
+//                int cacu_cnt = 0;
+//                for (int nbstart = bucket[0].first; nbstart < bucket[0].second; ++nbstart) {
+//                    if (hop_label[nbstart].second == 1) {
+//                        continue;
+//                    }
+//                    for (int j = 1; j < bucket.size(); ++j) {
+//                        int &start = bucket[j].first;
+//                        int &end = bucket[j].second;
+//                        while (start < end && hop_label[start].first < hop_label[nbstart].first) {
+//                            cacu_cnt++;
+//                            start++;
+//                        }
+//                        if (start < end && hop_label[start].first == hop_label[nbstart].first) {
+//                            //equals to the neighbor && closer
+//                            if (hop_label[start].second <= hop_label[nbstart].second) {
+//                                valid[nbstart] = false;
+//                                break;
+//                            }
+//                            start++;
+//                            cacu_cnt++;
+//                        }
+//                    }
+//                }
+                //---debug---
+                if (max_hop_nb_cnt < hop_label.size()) {
+                    max_hop_nb_cnt = hop_label.size();
+                    max_bucket_cnt = bucket.size();
+                }
+                if (max_cnt < cacu_cnt) max_cnt = cacu_cnt;
+                //-----------
+
+                if(pid == 0) cacu_t += omp_get_wtime() - cacu_t0;
+
+                double update_t0 = omp_get_wtime();
+//            vector<pair<int, int>> new_E;
+                for (int k = 0; k < valid.size(); ++k) {
+                    if (valid[k]) {
+                        new_E[i].push_back(E[i][k]);
+                    }
+
+                    if (E[i][k].second == 1) one_edge++;
+                }
+//            E[i] = new_E;
+                if(pid == 0) update_t += omp_get_wtime() - update_t0;
+
+
+                if (pid == 0 && circle_cnt != 0 && circle_cnt % 50000 == 0 && get_worker_id() == MASTER_RANK) {
+                    cout << get_worker_id() << " " << i << " E updated, "
+                         << omp_get_wtime() - t << "s consumed, "
+                         << " construct " << construct_t << "s, "
+                         << " cacu " << cacu_t << "s, "
+                         << " update " << update_t << "s, "
+                         << " max memory cost " << max_mem * sizeof(pair<int, int>) / (1024 * 1024) << "MB. "
+                         << " max nb cnt=" << max_hop_nb_cnt << " max buckets=" << max_bucket_cnt
+                         << " max caculation cnt=" << max_cnt << endl;
+                    max_hop_nb_cnt = 0;
+                    max_bucket_cnt = 0;
+                }
+            }
+        }
+
+        for(int i = 0; i < E.size(); ++i){
+            if (vertexes[i]->value().rank >= 0) continue;
+            ori_core_edge += E[i].size() + vertexes[i]->value().cutnbrs.size();
+            new_core_edge += new_E[i].size() + vertexes[i]->value().cutnbrs.size();
+            cut_edge += vertexes[i]->value().cutnbrs.size();
+            removed_cnt += E[i].size() - new_E[i].size();
+
+            E[i] = new_E[i];//update
+        }
+
+        removed_cnt = all_sum_LL(removed_cnt);
+        ori_core_edge = all_sum_LL(ori_core_edge);
+        one_edge = all_sum_LL(one_edge);
+        new_core_edge = all_sum_LL(new_core_edge);
+        cut_edge = all_sum_LL(cut_edge);
+        if(get_worker_id() == MASTER_RANK) {
+            cout << "----------------------------------------------------"<< endl;
+            cout << "Removing redundant edge finished, t=" << omp_get_wtime() - t << "secs." << endl;
+//            cout << ", rest " << (ori_core_edge - removed_cnt) * 100.0 / ori_core_edge << "%" << endl;
+            cout << "original core edge cnt " << ori_core_edge << " percentage " << ori_core_edge * 100.0 / global_m << "%" << endl;
+            cout << "new core edge cnt " << new_core_edge << " percentage " << new_core_edge * 100.0 / global_m << "%" << endl;
+            cout << "Removed edge cnt " << removed_cnt << " removed edge percentage " <<  removed_cnt * 100.0 / global_m << "%" << endl;
+            cout << "original edge cnt = " << global_m << " reduced edge cnt " << ori_core_edge << endl;
+            cout << "one distance edge cnt = " << one_edge << " percentage " << one_edge * 100.0 / global_m << "%" << endl;
+            cout << "cut edge cnt = " << cut_edge << " percentage " << cut_edge * 100.0 / global_m << "%" << endl;
+            cout << "----------------------------------------------------"<< endl;
         }
     }
 
@@ -655,39 +888,22 @@ public:
     {
         tolinecnt = 0;
         n = vertexes.size();
+        global_n = all_sum(n);
+
         m = 0;
+        global_m = 0;
         for (int i = 0; i < n; ++i) {
             m += vertexes[i]->value().nbrs.size();
+            global_m += vertexes[i]->value().nbrs.size() + vertexes[i]->value().cutnbrs.size();
         }
+        global_m = all_sum_LL(global_m);
+
         reduce(vertexes, max_w, n_threads);
-        remove_redundant_edges(vertexes);
+//        remove_redundant_edges_nbr(vertexes);
+        remove_redundant_edges_E(vertexes);
         create_tree(vertexes);
         compute_tree_label(vertexes);
 
-        //each node: rank, rid, rsize, h, w, nbr*w, dis*h, anc*(h-w)
-//        if(_my_rank == MASTER_RANK) {
-//            cout << "tree label=" << endl;
-//            for(int i = 0; i < vertexes.size(); ++i){
-//                auto& tn = vertexes[i];
-//                cout << "i=" << i << " "
-//                    << tn->id << " "
-//                    << tn->value().order << " "
-//                    << tn->value().rank << " "
-//                    << tn->value().rid << " "
-//                    << tn->value().rsize << " "
-//                    << tn->value().h << " "
-//                    << tn->value().w << " "
-//                    << tn->value().f <<  "\t";
-//                for (int j = 0; j < tn->value().w; ++j) cout << tn->value().nbrs[j] << " ";
-//                cout << "\t";
-//                for (int j = 0; j < tn->value().h - tn->value().w; ++j) cout << tn->value().anc[j] << " ";
-//                cout << "\t";
-//                for (int j = 0; j < tn->value().h; ++j) cout << (int)tn->value().dis[j] << " ";
-//                cout << "\t";
-//                cout << endl;
-//            }
-//            cout << endl;
-//        }
     }
 
 
@@ -751,7 +967,7 @@ public:
                 t_size += vertexes[v]->value().dis.size() * 1.0 * (sizeof(int)+sizeof(dint));//for mem cnt
                 vector<pair<int, int>>().swap(E[v]);//clear E
                 for(auto &d:vertexes[v]->value().dis) maxdis = max(maxdis, (int)d);//max distance
-            } else vector<pair<int,int>>(E[v]).swap(E[v]);//clear E
+            } else vector<pair<int,int>>(E[v]).swap(E[v]);//
         }
 
 #ifdef _DEBUG
@@ -827,13 +1043,7 @@ public:
         }
 
 
-//
-//#ifdef _DEBUG
-//        cout << _my_rank;
-//        cout << " get vertex id=" << v->id;
-//        cout << " order=" << v->value().order << " block=" << v->bid;
-//        cout << " local edge size=" << v->value().nbrs.size() << " cut edge size=" << v->value().cutnbrs.size() << endl;
-//#endif
+
         return v;
     }
 
@@ -865,17 +1075,67 @@ public:
         }
         writer.write("\n");
     }
+
+    void save_E(string tmp_outpath){
+
+        tmp_outpath += "/part_" + itoa(get_worker_id());
+        BufferedWriter* writer = new BufferedWriter(tmp_outpath.c_str());
+
+        writer->check();
+
+        sprintf(buf, "%d\n", E.size());//size
+        writer->write(buf);
+        for (int i = 0; i < E.size(); i++)
+        {
+            writer->check();
+            sprintf(buf, "%d ", E[i].size());//E[i] size
+            writer->write(buf);
+            for (int j = 0; j < E[i].size(); ++j) {
+                sprintf(buf, "%d %d ", E[i][j].first, E[i][j].second);//E[i][j]
+                writer->write(buf);
+            }
+            writer->write("\n");
+        }
+        delete writer;
+
+
+    }
+
+    bool check_tmp_graph(string outdir){
+        if (access(outdir, F_OK) == 0) {
+            if (force) {
+                if (rm_dir(outdir) == -1) {
+                    if (print)
+                        fprintf(stderr, "Error deleting %s!\n", outdir);
+                    exit(-1);
+                }
+                int created = mkdir(outdir, MODE);
+                if (created == -1) {
+                    if (print)
+                        fprintf(stderr, "Failed to create folder %s!\n", outdir);
+                    exit(-1);
+                }
+            } else {
+                if (print)
+                    fprintf(stderr, "Output path \"%s\" already exists!\n", outdir);
+//            hdfsDisconnect(fs);
+                return -1;
+            }
+        } else {
+
+            int created = mkdir(outdir, MODE);
+            if (created == -1) {
+                if (print)
+                    fprintf(stderr, "Failed to create folder %s!\n", outdir);
+                exit(-1);
+            }
+        }
+    }
 };
 
-//class CTCombiner : public Combiner<char>
-//{
-//public:
-//    virtual void combine(char& old, const char& new_msg)
-//    {
-//    }
-//};
 
-void blogel_ctlabeling(string in_path, string out_path, int max_w, int n_threads)
+
+void blogel_ctlabeling(string in_path, string out_path, string tmp_path, int max_w, int n_threads)
 {
     WorkerParams param;
     param.input_path = in_path;
@@ -886,5 +1146,7 @@ void blogel_ctlabeling(string in_path, string out_path, int max_w, int n_threads
 //    worker.setCombiner(&combiner);
     worker.set_max_w(max_w);
     worker.set_n_threads(n_threads);
+    worker.check_tmp_graph(tmp_graph);//check E dir
     worker.run(param);
+    worker.save_E(tmp_path);//save E
 }
