@@ -1,3 +1,0 @@
-/home/lmc/CLionProjects/BlogelTest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/lmc/CLionProjects/BlogelTest/cmake-build-debug/CMakeFiles/BlogelTest.dir
-/home/lmc/CLionProjects/BlogelTest/cmake-build-debug/CMakeFiles/edit_cache.dir
