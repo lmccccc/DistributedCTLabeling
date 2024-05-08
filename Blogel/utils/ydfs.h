@@ -278,7 +278,6 @@ int dirCheck(const char* indir, const char* outdir, bool print, bool force) //re
         } else {
             if (print)
                 fprintf(stderr, "Output path \"%s\" already exists!\n", outdir);
-//            hdfsDisconnect(fs);
             return -1;
         }
     } else {
@@ -584,12 +583,6 @@ struct BufferedWriter {
             exit(-1);
         }
         buf.clear();
-
-//        if (fsFlush(fs, curHdl)) {
-//            fprintf(stderr, "Failed to 'flush' %s\n", path);
-//            exit(-1);
-//        }
-//        hdfsCloseFile(fs, curHdl);
         fclose(curHdl);
     }
 

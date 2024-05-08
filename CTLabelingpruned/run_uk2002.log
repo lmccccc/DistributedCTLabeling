@@ -1,0 +1,165 @@
+nohup: ignoring input
+in dir=/mnt/data/lmc/uk2002
+out dir=/mnt/data/lmc/uk2002_label
+core graph dir=/mnt/data/lmc/uk2002_tmp
+bp dir=/mnt/data/lmc/uk2002_bp
+max width=120
+threads=2
+Load Time : 9.265483 seconds
+* #{blocks} = 10, #{vertices} = 18483186
+n=1866801
+0 local node=1866801, local edge cnt=59227648
+1 local node=1866799, local edge cnt=61932616
+2 local node=1685503, local edge cnt=41604820
+3 local node=1866801, local edge cnt=38685656
+4 local node=1863690, local edge cnt=34447878
+5 local node=1866796, local edge cnt=57375752
+6 local node=1866794, local edge cnt=82968422
+7 local node=1866600, local edge cnt=57408784
+8 local node=1866796, local edge cnt=40400352
+9 local node=1866606, local edge cnt=46807132
+0 Initializing q... 
+0 t=0.93754 secs
+0 Initializing E...
+0 t=3.02139 secs
+0 Reducing Graph...
+333334 nodes reduced, score[x]=3, remaining size=82.144% t=3.553 secs
+480454 nodes reduced, score[x]=7, remaining size=74.263% t=4.008 secs
+591566 nodes reduced, score[x]=9, remaining size=68.311% t=4.488 secs
+682476 nodes reduced, score[x]=11, remaining size=63.441% t=5.002 secs
+759400 nodes reduced, score[x]=13, remaining size=59.321% t=5.544 secs
+826067 nodes reduced, score[x]=15, remaining size=55.750% t=6.022 secs
+888569 nodes reduced, score[x]=16, remaining size=52.402% t=6.499 secs
+944125 nodes reduced, score[x]=18, remaining size=49.426% t=6.969 secs
+996757 nodes reduced, score[x]=19, remaining size=46.606% t=7.450 secs
+1046758 nodes reduced, score[x]=20, remaining size=43.928% t=7.931 secs
+1094378 nodes reduced, score[x]=21, remaining size=41.377% t=8.429 secs
+1137857 nodes reduced, score[x]=23, remaining size=39.048% t=8.898 secs
+1179524 nodes reduced, score[x]=24, remaining size=36.816% t=9.386 secs
+1217986 nodes reduced, score[x]=26, remaining size=34.755% t=9.870 secs
+1255025 nodes reduced, score[x]=27, remaining size=32.771% t=10.395 secs
+1289509 nodes reduced, score[x]=29, remaining size=30.924% t=10.887 secs
+1322843 nodes reduced, score[x]=30, remaining size=29.139% t=11.357 secs
+1354095 nodes reduced, score[x]=32, remaining size=27.464% t=11.834 secs
+1383508 nodes reduced, score[x]=34, remaining size=25.889% t=12.319 secs
+1412080 nodes reduced, score[x]=35, remaining size=24.358% t=12.767 secs
+1439108 nodes reduced, score[x]=37, remaining size=22.910% t=13.269 secs
+1464751 nodes reduced, score[x]=39, remaining size=21.537% t=13.760 secs
+1488562 nodes reduced, score[x]=42, remaining size=20.261% t=14.268 secs
+1511291 nodes reduced, score[x]=44, remaining size=19.044% t=14.772 secs
+1533031 nodes reduced, score[x]=46, remaining size=17.879% t=15.263 secs
+2 reduce finished, time=16.6431s
+1553032 nodes reduced, score[x]=50, remaining size=16.808% t=15.856 secs
+4 reduce finished, time=17.2342s
+1571554 nodes reduced, score[x]=54, remaining size=15.816% t=16.407 secs
+1588798 nodes reduced, score[x]=58, remaining size=14.892% t=16.953 secs
+3 reduce finished, time=18.13s
+8 reduce finished, time=18.3578s
+1604547 nodes reduced, score[x]=64, remaining size=14.048% t=17.500 secs
+1618838 nodes reduced, score[x]=70, remaining size=13.283% t=18.102 secs
+7 reduce finished, time=19.5212s
+1631784 nodes reduced, score[x]=78, remaining size=12.589% t=18.767 secs
+9 reduce finished, time=20.4022s
+1643148 nodes reduced, score[x]=88, remaining size=11.981% t=19.448 secs
+5 reduce finished, time=20.5795s
+1 reduce finished, time=21.0248s
+1653458 nodes reduced, score[x]=97, remaining size=11.428% t=20.042 secs
+1662389 nodes reduced, score[x]=112, remaining size=10.950% t=20.792 secs
+0 reduce finished, time=21.1149s
+Reordering edges...
+6 reduce finished, time=25.935s
+0 Reducing finished, t=40.418 secs
+n_core=200658,m_core=26115648,node_rate=0.107,edge_rate=0.441
+1 Reducing finished, t=41.455 secs
+n_core=225131,m_core=26899846,node_rate=0.121,edge_rate=0.434
+2 Reducing finished, t=41.455 secs
+n_core=125179,m_core=16525402,node_rate=0.074,edge_rate=0.397
+3 Reducing finished, t=41.456 secs
+n_core=166945,m_core=24257937,node_rate=0.089,edge_rate=0.627
+4 Reducing finished, t=41.456 secs
+n_core=132989,m_core=18048377,node_rate=0.071,edge_rate=0.524
+5 Reducing finished, t=41.456 secs
+n_core=145519,m_core=21470450,node_rate=0.078,edge_rate=0.374
+6 Reducing finished, t=41.456 secs
+n_core=176994,m_core=26961018,node_rate=0.095,edge_rate=0.325
+7 Reducing finished, t=41.456 secs
+n_core=130441,m_core=18614915,node_rate=0.070,edge_rate=0.324
+8 Reducing finished, t=41.456 secs
+n_core=94929,m_core=11886500,node_rate=0.051,edge_rate=0.294
+9 Reducing finished, t=41.456 secs
+n_core=81380,m_core=13769497,node_rate=0.044,edge_rate=0.294
+global_n_core = 1480165, global_m_core=204549590, node_rate=0.0800817, edge_rate=0.390679
+n_threads_bp = 2
+[0][1][2][3]
+2 BP Label Constructed, bp_size=115.734 MB, t = 2.508 secs
+
+9 BP Label Constructed, bp_size=128.170 MB, t = 2.635 secs
+
+8 BP Label Constructed, bp_size=128.183 MB, t = 2.773 secs
+
+4 BP Label Constructed, bp_size=127.969 MB, t = 2.898 secs
+
+3 BP Label Constructed, bp_size=128.183 MB, t = 3.016 secs
+
+7 BP Label Constructed, bp_size=128.169 MB, t = 3.280 secs
+
+1 BP Label Constructed, bp_size=128.183 MB, t = 3.690 secs
+
+5 BP Label Constructed, bp_size=128.183 MB, t = 3.930 secs
+
+6 BP Label Constructed, bp_size=128.183 MB, t = 4.124 secs
+
+0 BP Label Constructed, bp_size=128.183 MB, t = 4.055 secs
+removing redundant E edges...
+0E size=1866801, 2 hop dectation need 12443728278 operations, select rate=0.226955 , about 28.2417seconds.
+1E size=1866799, 2 hop dectation need 12455622361 operations, select rate=0.226739 , about 28.2417seconds.
+2E size=1685503, 2 hop dectation need 5719984476 operations, select rate=0.493738 , about 28.2417seconds.
+3E size=1866801, 2 hop dectation need 10816134066 operations, select rate=0.261107 , about 28.2417seconds.
+4E size=1863690, 2 hop dectation need 5760030228 operations, select rate=0.490305 , about 28.2417seconds.
+5E size=1866796, 2 hop dectation need 8582649672 operations, select rate=0.329056 , about 28.2417seconds.
+6E size=1866794, 2 hop dectation need 11680073045 operations, select rate=0.241794 , about 28.2417seconds.
+7E size=1866600, 2 hop dectation need 6458827500 operations, select rate=0.437258 , about 28.2417seconds.
+8E size=1866796, 2 hop dectation need 2824171242 operations, select rate=1 , about 28.2417seconds.
+9E size=1866606, 2 hop dectation need 4178747444 operations, select rate=0.675842 , about 28.2417seconds.
+8 multi-thread E reduction finished, cost 20.0983sec.
+2 multi-thread E reduction finished, cost 19.6464sec.
+7 multi-thread E reduction finished, cost 16.7531sec.
+9 multi-thread E reduction finished, cost 19.9838sec.
+5 multi-thread E reduction finished, cost 15.7005sec.
+6 multi-thread E reduction finished, cost 14.1009sec.
+4 multi-thread E reduction finished, cost 23.6236sec.
+1 multi-thread E reduction finished, cost 19.0241sec.
+3 multi-thread E reduction finished, cost 25.3388sec.
+0 multi-thread E reduction finished, cost 21.327sec.
+----------------------------------------------------
+Removing redundant edge finished, t=21.9401secs.
+original core edge cnt 203492216 percentage 38.866%
+new core edge cnt 3515217 percentage 0.671388%
+Removed edge cnt 0 removed edge percentage 0%
+original edge cnt = 523574516 reduced edge cnt 203492216
+one distance edge cnt = 79746406 percentage 15.2311%
+cut edge cnt = 2527750 percentage 0.482787%
+----------------------------------------------------
+Creating Tree...
+Core tree constructed, maxh=218, maxdep=155, cnt_root=288034, max_stree=2770, avg_rsize=48.504, t=6.221 secs
+Computing Tree Label...
+2 Tree Label Computed, t=7.372 secs, maxdis=120, tree label size=389.154 MB
+8 Tree Label Computed, t=8.181 secs, maxdis=120, tree label size=459.906 MB
+7 Tree Label Computed, t=8.767 secs, maxdis=120, tree label size=437.154 MB
+4 Tree Label Computed, t=8.469 secs, maxdis=120, tree label size=467.413 MB
+9 Tree Label Computed, t=9.258 secs, maxdis=97, tree label size=485.267 MB
+3 Tree Label Computed, t=8.792 secs, maxdis=120, tree label size=491.977 MB
+1 Tree Label Computed, t=9.687 secs, maxdis=120, tree label size=460.892 MB
+5 Tree Label Computed, t=9.843 secs, maxdis=120, tree label size=447.392 MB
+0 Tree Label Computed, t=10.159 secs, maxdis=120, tree label size=485.621 MB
+Block Initialization Time : 102.445178 seconds
+6 Tree Label Computed, t=11.865 secs, maxdis=120, tree label size=495.343 MB
+Superstep 1 done. Time elapsed: 0.000265837 seconds
+#bmsgs: 0
+Communication Time : 0.000170 seconds
+- Serialization Time : 0.000002 seconds
+- Transfer Time : 0.000166 seconds
+Total Computational Time : 0.000342 seconds
+Total #msgs=0
+Total #bmsgs=0
+Dump Time : 43.097712 seconds

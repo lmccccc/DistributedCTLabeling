@@ -1,0 +1,493 @@
+nohup: ignoring input
+in dir=/mnt/data/lmc/ukunion
+out dir=/mnt/data/lmc/ukunion_label
+core graph dir=/mnt/data/lmc/ukunion_tmp
+bp dir=/mnt/data/lmc/ukunion_bp
+max width=200
+threads=2
+Load Time : 165.810826 seconds
+* #{blocks} = 10, #{vertices} = 131572430
+n=13288814
+0 local node=13288814, local edge cnt=532549372
+1 local node=13288814, local edge cnt=723128412
+2 local node=13007588, local edge cnt=945853342
+3 local node=13283241, local edge cnt=1350617672
+4 local node=13277110, local edge cnt=965018320
+5 local node=13288814, local edge cnt=924665086
+6 local node=13286643, local edge cnt=1083237178
+7 local node=13227083, local edge cnt=1034440528
+8 local node=13288814, local edge cnt=1015047830
+9 local node=12335509, local edge cnt=736099382
+0 Initializing q... 
+0 t=7.81545 secs
+0 Initializing E...
+0 t=25.6066 secs
+0 Reducing Graph...
+1000001 nodes reduced, score[x]=1, remaining size=92.475% t=26.630 secs
+1500003 nodes reduced, score[x]=2, remaining size=88.712% t=27.225 secs
+2000004 nodes reduced, score[x]=2, remaining size=84.950% t=28.020 secs
+2333338 nodes reduced, score[x]=3, remaining size=82.441% t=28.659 secs
+2666672 nodes reduced, score[x]=3, remaining size=79.933% t=29.361 secs
+2916675 nodes reduced, score[x]=4, remaining size=78.052% t=29.986 secs
+3127896 nodes reduced, score[x]=5, remaining size=76.462% t=30.558 secs
+3327898 nodes reduced, score[x]=5, remaining size=74.957% t=31.267 secs
+3527899 nodes reduced, score[x]=5, remaining size=73.452% t=31.853 secs
+3694566 nodes reduced, score[x]=6, remaining size=72.198% t=32.446 secs
+3861233 nodes reduced, score[x]=6, remaining size=70.944% t=32.993 secs
+4004091 nodes reduced, score[x]=7, remaining size=69.869% t=33.501 secs
+4146950 nodes reduced, score[x]=7, remaining size=68.794% t=34.029 secs
+4271952 nodes reduced, score[x]=8, remaining size=67.853% t=34.592 secs
+4396953 nodes reduced, score[x]=8, remaining size=66.912% t=35.126 secs
+4521954 nodes reduced, score[x]=8, remaining size=65.972% t=35.648 secs
+4633066 nodes reduced, score[x]=9, remaining size=65.136% t=36.215 secs
+4744179 nodes reduced, score[x]=9, remaining size=64.299% t=36.770 secs
+4847745 nodes reduced, score[x]=10, remaining size=63.520% t=37.334 secs
+4947746 nodes reduced, score[x]=10, remaining size=62.768% t=37.857 secs
+5047747 nodes reduced, score[x]=10, remaining size=62.015% t=38.443 secs
+5138661 nodes reduced, score[x]=11, remaining size=61.331% t=39.028 secs
+5229571 nodes reduced, score[x]=11, remaining size=60.647% t=39.549 secs
+5320481 nodes reduced, score[x]=11, remaining size=59.963% t=40.096 secs
+5403818 nodes reduced, score[x]=12, remaining size=59.336% t=40.705 secs
+5487152 nodes reduced, score[x]=12, remaining size=58.708% t=41.232 secs
+5570486 nodes reduced, score[x]=12, remaining size=58.081% t=41.728 secs
+5647410 nodes reduced, score[x]=13, remaining size=57.503% t=42.272 secs
+5724334 nodes reduced, score[x]=13, remaining size=56.924% t=42.755 secs
+5801258 nodes reduced, score[x]=13, remaining size=56.345% t=43.209 secs
+5878184 nodes reduced, score[x]=13, remaining size=55.766% t=43.657 secs
+5949613 nodes reduced, score[x]=14, remaining size=55.228% t=44.398 secs
+6021042 nodes reduced, score[x]=14, remaining size=54.691% t=44.899 secs
+6092471 nodes reduced, score[x]=14, remaining size=54.153% t=45.357 secs
+6163901 nodes reduced, score[x]=14, remaining size=53.616% t=45.963 secs
+6230568 nodes reduced, score[x]=15, remaining size=53.114% t=46.486 secs
+6297236 nodes reduced, score[x]=15, remaining size=52.613% t=46.943 secs
+6363904 nodes reduced, score[x]=15, remaining size=52.111% t=47.486 secs
+6426405 nodes reduced, score[x]=16, remaining size=51.640% t=48.054 secs
+6488907 nodes reduced, score[x]=16, remaining size=51.170% t=48.526 secs
+6551408 nodes reduced, score[x]=16, remaining size=50.700% t=49.029 secs
+6610232 nodes reduced, score[x]=17, remaining size=50.257% t=49.602 secs
+6669058 nodes reduced, score[x]=17, remaining size=49.814% t=50.044 secs
+6727882 nodes reduced, score[x]=17, remaining size=49.372% t=50.479 secs
+6783438 nodes reduced, score[x]=18, remaining size=48.954% t=51.049 secs
+6838994 nodes reduced, score[x]=18, remaining size=48.536% t=51.478 secs
+6894550 nodes reduced, score[x]=18, remaining size=48.118% t=51.921 secs
+6950107 nodes reduced, score[x]=18, remaining size=47.700% t=52.361 secs
+7002739 nodes reduced, score[x]=19, remaining size=47.304% t=53.002 secs
+7055372 nodes reduced, score[x]=19, remaining size=46.907% t=53.431 secs
+7108005 nodes reduced, score[x]=19, remaining size=46.511% t=53.863 secs
+7160638 nodes reduced, score[x]=19, remaining size=46.115% t=54.358 secs
+7210640 nodes reduced, score[x]=20, remaining size=45.739% t=55.083 secs
+7260641 nodes reduced, score[x]=20, remaining size=45.363% t=55.504 secs
+7310642 nodes reduced, score[x]=20, remaining size=44.986% t=55.951 secs
+7360644 nodes reduced, score[x]=20, remaining size=44.610% t=56.358 secs
+7408264 nodes reduced, score[x]=21, remaining size=44.252% t=56.994 secs
+7455886 nodes reduced, score[x]=21, remaining size=43.894% t=57.455 secs
+7503506 nodes reduced, score[x]=21, remaining size=43.535% t=57.938 secs
+7551126 nodes reduced, score[x]=21, remaining size=43.177% t=58.508 secs
+7596581 nodes reduced, score[x]=22, remaining size=42.835% t=59.202 secs
+7642036 nodes reduced, score[x]=22, remaining size=42.493% t=59.654 secs
+7687491 nodes reduced, score[x]=22, remaining size=42.151% t=60.105 secs
+7732951 nodes reduced, score[x]=22, remaining size=41.809% t=60.604 secs
+7778407 nodes reduced, score[x]=22, remaining size=41.467% t=61.249 secs
+7821886 nodes reduced, score[x]=23, remaining size=41.139% t=62.064 secs
+7865366 nodes reduced, score[x]=23, remaining size=40.812% t=62.458 secs
+7908845 nodes reduced, score[x]=23, remaining size=40.485% t=62.797 secs
+7952324 nodes reduced, score[x]=23, remaining size=40.158% t=63.206 secs
+7995803 nodes reduced, score[x]=23, remaining size=39.831% t=63.695 secs
+8037471 nodes reduced, score[x]=24, remaining size=39.517% t=64.378 secs
+8079143 nodes reduced, score[x]=24, remaining size=39.203% t=64.836 secs
+8120810 nodes reduced, score[x]=24, remaining size=38.890% t=65.245 secs
+8162477 nodes reduced, score[x]=24, remaining size=38.576% t=65.620 secs
+8204144 nodes reduced, score[x]=24, remaining size=38.263% t=66.031 secs
+8245811 nodes reduced, score[x]=24, remaining size=37.949% t=66.620 secs
+8285812 nodes reduced, score[x]=25, remaining size=37.648% t=67.239 secs
+8325813 nodes reduced, score[x]=25, remaining size=37.347% t=67.665 secs
+8365814 nodes reduced, score[x]=25, remaining size=37.046% t=68.137 secs
+8405815 nodes reduced, score[x]=25, remaining size=36.745% t=68.623 secs
+8444277 nodes reduced, score[x]=26, remaining size=36.456% t=69.347 secs
+8482739 nodes reduced, score[x]=26, remaining size=36.166% t=69.805 secs
+8521201 nodes reduced, score[x]=26, remaining size=35.877% t=70.265 secs
+8559663 nodes reduced, score[x]=26, remaining size=35.587% t=70.750 secs
+8596701 nodes reduced, score[x]=27, remaining size=35.309% t=71.479 secs
+8633742 nodes reduced, score[x]=27, remaining size=35.030% t=71.914 secs
+8670780 nodes reduced, score[x]=27, remaining size=34.751% t=72.293 secs
+8707818 nodes reduced, score[x]=27, remaining size=34.473% t=72.754 secs
+8743534 nodes reduced, score[x]=28, remaining size=34.204% t=73.506 secs
+8779250 nodes reduced, score[x]=28, remaining size=33.935% t=73.925 secs
+8814971 nodes reduced, score[x]=28, remaining size=33.666% t=74.332 secs
+8850687 nodes reduced, score[x]=28, remaining size=33.397% t=74.774 secs
+8885170 nodes reduced, score[x]=29, remaining size=33.138% t=75.521 secs
+8919653 nodes reduced, score[x]=29, remaining size=32.878% t=75.934 secs
+8954136 nodes reduced, score[x]=29, remaining size=32.619% t=76.402 secs
+8988620 nodes reduced, score[x]=29, remaining size=32.360% t=77.044 secs
+9021954 nodes reduced, score[x]=30, remaining size=32.109% t=77.715 secs
+9055288 nodes reduced, score[x]=30, remaining size=31.858% t=78.099 secs
+9088623 nodes reduced, score[x]=30, remaining size=31.607% t=78.585 secs
+9120960 nodes reduced, score[x]=31, remaining size=31.364% t=79.347 secs
+9153220 nodes reduced, score[x]=31, remaining size=31.121% t=79.740 secs
+9185484 nodes reduced, score[x]=31, remaining size=30.878% t=80.178 secs
+9217743 nodes reduced, score[x]=31, remaining size=30.635% t=80.641 secs
+9248994 nodes reduced, score[x]=32, remaining size=30.400% t=81.416 secs
+9280247 nodes reduced, score[x]=32, remaining size=30.165% t=81.988 secs
+9311498 nodes reduced, score[x]=32, remaining size=29.930% t=82.448 secs
+9341803 nodes reduced, score[x]=33, remaining size=29.702% t=83.300 secs
+9372107 nodes reduced, score[x]=33, remaining size=29.474% t=83.806 secs
+9402411 nodes reduced, score[x]=33, remaining size=29.246% t=84.256 secs
+9432715 nodes reduced, score[x]=33, remaining size=29.018% t=85.085 secs
+9462132 nodes reduced, score[x]=34, remaining size=28.796% t=85.581 secs
+9491544 nodes reduced, score[x]=34, remaining size=28.575% t=86.154 secs
+9520956 nodes reduced, score[x]=34, remaining size=28.354% t=87.022 secs
+9549528 nodes reduced, score[x]=35, remaining size=28.139% t=87.514 secs
+9578100 nodes reduced, score[x]=35, remaining size=27.924% t=88.026 secs
+9606672 nodes reduced, score[x]=35, remaining size=27.709% t=88.621 secs
+9634455 nodes reduced, score[x]=36, remaining size=27.500% t=89.284 secs
+9662234 nodes reduced, score[x]=36, remaining size=27.290% t=89.782 secs
+9690012 nodes reduced, score[x]=36, remaining size=27.081% t=90.277 secs
+9717041 nodes reduced, score[x]=37, remaining size=26.878% t=91.098 secs
+9744069 nodes reduced, score[x]=37, remaining size=26.675% t=91.563 secs
+9771097 nodes reduced, score[x]=37, remaining size=26.471% t=91.915 secs
+9797413 nodes reduced, score[x]=38, remaining size=26.273% t=92.783 secs
+9823729 nodes reduced, score[x]=38, remaining size=26.075% t=93.206 secs
+9850045 nodes reduced, score[x]=38, remaining size=25.877% t=93.708 secs
+9876362 nodes reduced, score[x]=38, remaining size=25.679% t=94.319 secs
+9902004 nodes reduced, score[x]=39, remaining size=25.486% t=94.995 secs
+9927646 nodes reduced, score[x]=39, remaining size=25.293% t=95.419 secs
+9953288 nodes reduced, score[x]=39, remaining size=25.100% t=95.961 secs
+9978289 nodes reduced, score[x]=40, remaining size=24.912% t=96.725 secs
+10003290 nodes reduced, score[x]=40, remaining size=24.724% t=97.154 secs
+10028291 nodes reduced, score[x]=40, remaining size=24.536% t=97.621 secs
+10052682 nodes reduced, score[x]=41, remaining size=24.352% t=98.481 secs
+10077073 nodes reduced, score[x]=41, remaining size=24.169% t=98.942 secs
+10101464 nodes reduced, score[x]=41, remaining size=23.985% t=99.409 secs
+10125274 nodes reduced, score[x]=42, remaining size=23.806% t=100.347 secs
+10149086 nodes reduced, score[x]=42, remaining size=23.627% t=100.741 secs
+10172896 nodes reduced, score[x]=42, remaining size=23.448% t=101.202 secs
+10196152 nodes reduced, score[x]=43, remaining size=23.273% t=102.117 secs
+10219408 nodes reduced, score[x]=43, remaining size=23.098% t=102.623 secs
+10242664 nodes reduced, score[x]=43, remaining size=22.923% t=103.092 secs
+10265392 nodes reduced, score[x]=44, remaining size=22.752% t=103.918 secs
+10288120 nodes reduced, score[x]=44, remaining size=22.581% t=104.225 secs
+10310848 nodes reduced, score[x]=44, remaining size=22.410% t=104.674 secs
+10333071 nodes reduced, score[x]=45, remaining size=22.242% t=105.605 secs
+10355294 nodes reduced, score[x]=45, remaining size=22.075% t=106.038 secs
+10377523 nodes reduced, score[x]=45, remaining size=21.908% t=106.431 secs
+10399265 nodes reduced, score[x]=46, remaining size=21.744% t=107.327 secs
+10421014 nodes reduced, score[x]=46, remaining size=21.581% t=107.787 secs
+10442754 nodes reduced, score[x]=46, remaining size=21.417% t=108.560 secs
+10464033 nodes reduced, score[x]=47, remaining size=21.257% t=109.188 secs
+10485310 nodes reduced, score[x]=47, remaining size=21.097% t=109.599 secs
+10506144 nodes reduced, score[x]=48, remaining size=20.940% t=110.542 secs
+10526978 nodes reduced, score[x]=48, remaining size=20.783% t=110.953 secs
+10547812 nodes reduced, score[x]=48, remaining size=20.626% t=111.593 secs
+10568221 nodes reduced, score[x]=49, remaining size=20.473% t=112.424 secs
+10588630 nodes reduced, score[x]=49, remaining size=20.319% t=112.908 secs
+10608631 nodes reduced, score[x]=50, remaining size=20.169% t=113.958 secs
+10628632 nodes reduced, score[x]=50, remaining size=20.018% t=114.501 secs
+10648633 nodes reduced, score[x]=50, remaining size=19.868% t=115.448 secs
+10668242 nodes reduced, score[x]=51, remaining size=19.720% t=116.108 secs
+10687850 nodes reduced, score[x]=51, remaining size=19.573% t=116.576 secs
+10707081 nodes reduced, score[x]=52, remaining size=19.428% t=117.720 secs
+10726314 nodes reduced, score[x]=52, remaining size=19.283% t=118.212 secs
+10745545 nodes reduced, score[x]=52, remaining size=19.138% t=118.882 secs
+10764413 nodes reduced, score[x]=53, remaining size=18.996% t=119.743 secs
+10783282 nodes reduced, score[x]=53, remaining size=18.854% t=120.244 secs
+10802150 nodes reduced, score[x]=53, remaining size=18.712% t=121.115 secs
+10820669 nodes reduced, score[x]=54, remaining size=18.573% t=121.868 secs
+10839188 nodes reduced, score[x]=54, remaining size=18.434% t=122.525 secs
+10857371 nodes reduced, score[x]=55, remaining size=18.297% t=123.551 secs
+10875553 nodes reduced, score[x]=55, remaining size=18.160% t=124.130 secs
+10893414 nodes reduced, score[x]=56, remaining size=18.026% t=125.179 secs
+10911273 nodes reduced, score[x]=56, remaining size=17.891% t=125.734 secs
+10928819 nodes reduced, score[x]=57, remaining size=17.759% t=126.865 secs
+10946363 nodes reduced, score[x]=57, remaining size=17.627% t=127.418 secs
+10963605 nodes reduced, score[x]=58, remaining size=17.497% t=128.630 secs
+10980849 nodes reduced, score[x]=58, remaining size=17.368% t=129.184 secs
+10998094 nodes reduced, score[x]=58, remaining size=17.238% t=130.252 secs
+11015045 nodes reduced, score[x]=59, remaining size=17.110% t=130.866 secs
+11031995 nodes reduced, score[x]=59, remaining size=16.983% t=131.807 secs
+11048669 nodes reduced, score[x]=60, remaining size=16.857% t=132.554 secs
+11065337 nodes reduced, score[x]=60, remaining size=16.732% t=133.441 secs
+11081731 nodes reduced, score[x]=61, remaining size=16.609% t=134.287 secs
+11098125 nodes reduced, score[x]=61, remaining size=16.485% t=134.845 secs
+11114255 nodes reduced, score[x]=62, remaining size=16.364% t=136.023 secs
+11130386 nodes reduced, score[x]=62, remaining size=16.242% t=136.647 secs
+11146260 nodes reduced, score[x]=63, remaining size=16.123% t=137.869 secs
+11162134 nodes reduced, score[x]=63, remaining size=16.004% t=138.741 secs
+11177762 nodes reduced, score[x]=64, remaining size=15.886% t=139.763 secs
+11193396 nodes reduced, score[x]=64, remaining size=15.768% t=140.991 secs
+11208786 nodes reduced, score[x]=65, remaining size=15.652% t=141.633 secs
+11223938 nodes reduced, score[x]=66, remaining size=15.538% t=142.904 secs
+11239090 nodes reduced, score[x]=66, remaining size=15.424% t=143.835 secs
+11254016 nodes reduced, score[x]=67, remaining size=15.312% t=144.923 secs
+11268722 nodes reduced, score[x]=68, remaining size=15.201% t=146.356 secs
+11283428 nodes reduced, score[x]=68, remaining size=15.091% t=147.023 secs
+11297922 nodes reduced, score[x]=69, remaining size=14.982% t=148.364 secs
+11312208 nodes reduced, score[x]=70, remaining size=14.874% t=149.703 secs
+11326494 nodes reduced, score[x]=70, remaining size=14.767% t=150.891 secs
+11340581 nodes reduced, score[x]=71, remaining size=14.661% t=151.928 secs
+11354473 nodes reduced, score[x]=72, remaining size=14.556% t=153.226 secs
+11368173 nodes reduced, score[x]=73, remaining size=14.453% t=154.654 secs
+11381687 nodes reduced, score[x]=74, remaining size=14.351% t=155.973 secs
+11395022 nodes reduced, score[x]=75, remaining size=14.251% t=157.390 secs
+11408357 nodes reduced, score[x]=75, remaining size=14.151% t=158.787 secs
+11421518 nodes reduced, score[x]=76, remaining size=14.052% t=160.011 secs
+11434507 nodes reduced, score[x]=77, remaining size=13.954% t=161.112 secs
+11447347 nodes reduced, score[x]=78, remaining size=13.857% t=162.525 secs
+11460025 nodes reduced, score[x]=79, remaining size=13.762% t=164.043 secs
+11472526 nodes reduced, score[x]=80, remaining size=13.668% t=165.471 secs
+11484875 nodes reduced, score[x]=81, remaining size=13.575% t=166.981 secs
+11497097 nodes reduced, score[x]=82, remaining size=13.483% t=168.442 secs
+11509146 nodes reduced, score[x]=83, remaining size=13.392% t=169.951 secs
+11521051 nodes reduced, score[x]=84, remaining size=13.303% t=171.332 secs
+11532819 nodes reduced, score[x]=85, remaining size=13.214% t=172.905 secs
+11544315 nodes reduced, score[x]=87, remaining size=13.128% t=174.557 secs
+11555681 nodes reduced, score[x]=88, remaining size=13.042% t=175.872 secs
+11566918 nodes reduced, score[x]=89, remaining size=12.957% t=177.153 secs
+11578030 nodes reduced, score[x]=90, remaining size=12.874% t=178.418 secs
+11589021 nodes reduced, score[x]=91, remaining size=12.791% t=179.720 secs
+11599891 nodes reduced, score[x]=92, remaining size=12.709% t=181.070 secs
+11610651 nodes reduced, score[x]=93, remaining size=12.628% t=182.649 secs
+11621290 nodes reduced, score[x]=94, remaining size=12.548% t=184.264 secs
+11631711 nodes reduced, score[x]=96, remaining size=12.470% t=185.702 secs
+11642023 nodes reduced, score[x]=97, remaining size=12.392% t=187.002 secs
+11652228 nodes reduced, score[x]=98, remaining size=12.316% t=188.401 secs
+11662331 nodes reduced, score[x]=99, remaining size=12.239% t=189.311 secs
+11672434 nodes reduced, score[x]=99, remaining size=12.163% t=189.890 secs
+11682436 nodes reduced, score[x]=100, remaining size=12.088% t=191.412 secs
+11692240 nodes reduced, score[x]=102, remaining size=12.014% t=192.867 secs
+11701950 nodes reduced, score[x]=103, remaining size=11.941% t=194.331 secs
+11711566 nodes reduced, score[x]=104, remaining size=11.869% t=195.861 secs
+11721004 nodes reduced, score[x]=106, remaining size=11.798% t=197.504 secs
+11730353 nodes reduced, score[x]=107, remaining size=11.728% t=198.850 secs
+11739614 nodes reduced, score[x]=108, remaining size=11.658% t=200.501 secs
+11748707 nodes reduced, score[x]=110, remaining size=11.589% t=202.057 secs
+11757717 nodes reduced, score[x]=111, remaining size=11.522% t=203.303 secs
+11766648 nodes reduced, score[x]=112, remaining size=11.454% t=205.076 secs
+11775420 nodes reduced, score[x]=114, remaining size=11.388% t=206.351 secs
+11784049 nodes reduced, score[x]=116, remaining size=11.324% t=208.104 secs
+11792605 nodes reduced, score[x]=117, remaining size=11.259% t=209.589 secs
+11801009 nodes reduced, score[x]=119, remaining size=11.196% t=211.045 secs
+11809344 nodes reduced, score[x]=120, remaining size=11.133% t=212.216 secs
+11817542 nodes reduced, score[x]=122, remaining size=11.072% t=213.773 secs
+11825674 nodes reduced, score[x]=123, remaining size=11.010% t=215.097 secs
+11833677 nodes reduced, score[x]=125, remaining size=10.950% t=216.660 secs
+11841552 nodes reduced, score[x]=127, remaining size=10.891% t=218.333 secs
+11849375 nodes reduced, score[x]=128, remaining size=10.832% t=219.876 secs
+11857070 nodes reduced, score[x]=130, remaining size=10.774% t=221.317 secs
+11864647 nodes reduced, score[x]=132, remaining size=10.717% t=223.079 secs
+11872110 nodes reduced, score[x]=134, remaining size=10.661% t=224.883 secs
+11879463 nodes reduced, score[x]=136, remaining size=10.606% t=226.058 secs
+11886714 nodes reduced, score[x]=138, remaining size=10.551% t=227.637 secs
+11893863 nodes reduced, score[x]=140, remaining size=10.497% t=229.371 secs
+11900931 nodes reduced, score[x]=142, remaining size=10.444% t=230.893 secs
+11907876 nodes reduced, score[x]=144, remaining size=10.392% t=232.534 secs
+11914726 nodes reduced, score[x]=146, remaining size=10.340% t=234.441 secs
+11921439 nodes reduced, score[x]=149, remaining size=10.290% t=236.091 secs
+11928063 nodes reduced, score[x]=151, remaining size=10.240% t=237.701 secs
+11934569 nodes reduced, score[x]=154, remaining size=10.191% t=239.581 secs
+11940982 nodes reduced, score[x]=156, remaining size=10.143% t=241.228 secs
+11947278 nodes reduced, score[x]=159, remaining size=10.095% t=243.119 secs
+11953454 nodes reduced, score[x]=162, remaining size=10.049% t=244.861 secs
+11959536 nodes reduced, score[x]=165, remaining size=10.003% t=246.765 secs
+11965495 nodes reduced, score[x]=168, remaining size=9.958% t=248.525 secs
+11971387 nodes reduced, score[x]=170, remaining size=9.914% t=250.064 secs
+11977242 nodes reduced, score[x]=171, remaining size=9.870% t=251.430 secs
+11982990 nodes reduced, score[x]=174, remaining size=9.826% t=253.042 secs
+11988640 nodes reduced, score[x]=177, remaining size=9.784% t=254.793 secs
+11994227 nodes reduced, score[x]=179, remaining size=9.742% t=256.047 secs
+11999753 nodes reduced, score[x]=181, remaining size=9.700% t=257.357 secs
+12005196 nodes reduced, score[x]=184, remaining size=9.659% t=259.008 secs
+12010546 nodes reduced, score[x]=187, remaining size=9.619% t=260.802 secs
+12015810 nodes reduced, score[x]=190, remaining size=9.580% t=262.431 secs
+12021019 nodes reduced, score[x]=192, remaining size=9.540% t=264.049 secs
+2 reduce finished, time=264.124s
+4 reduce finished, time=264.543s
+12026150 nodes reduced, score[x]=195, remaining size=9.502% t=265.508 secs
+12031201 nodes reduced, score[x]=198, remaining size=9.464% t=267.189 secs
+0 reduce finished, time=267.804s
+Reordering edges...
+1 reduce finished, time=287.697s
+5 reduce finished, time=312.168s
+6 reduce finished, time=353.424s
+3 reduce finished, time=369.781s
+8 reduce finished, time=392.208s
+7 reduce finished, time=439.987s
+9 reduce finished, time=646.648s
+0 Reducing finished, t=920.160 secs
+n_core=1255883,m_core=434499791,node_rate=0.095,edge_rate=0.816
+1 Reducing finished, t=920.160 secs
+n_core=1704395,m_core=707506308,node_rate=0.128,edge_rate=0.978
+2 Reducing finished, t=920.160 secs
+n_core=1505233,m_core=878891652,node_rate=0.116,edge_rate=0.929
+3 Reducing finished, t=920.160 secs
+n_core=1772112,m_core=1084216646,node_rate=0.133,edge_rate=0.803
+4 Reducing finished, t=920.160 secs
+n_core=1463138,m_core=743924715,node_rate=0.110,edge_rate=0.771
+5 Reducing finished, t=920.161 secs
+n_core=1831220,m_core=899263784,node_rate=0.138,edge_rate=0.973
+6 Reducing finished, t=920.161 secs
+n_core=1960509,m_core=997013431,node_rate=0.148,edge_rate=0.920
+7 Reducing finished, t=920.161 secs
+n_core=1590544,m_core=831241173,node_rate=0.120,edge_rate=0.804
+8 Reducing finished, t=920.161 secs
+n_core=1500185,m_core=731557435,node_rate=0.113,edge_rate=0.721
+9 Reducing finished, t=920.161 secs
+n_core=2109151,m_core=1080188961,node_rate=0.171,edge_rate=1.467
+global_n_core = 16692370, global_m_core=8388303896, node_rate=0.126868, edge_rate=0.899378
+removing redundant E edges...
+0E size=13288814, 2 hop dectation need 1677084018762 operations, about 16770.8seconds.
+1E size=13288814, 2 hop dectation need 4425968407539 operations, about 44259.7seconds.
+2E size=13007588, 2 hop dectation need 3473351238028 operations, about 34733.5seconds.
+3E size=13283241, 2 hop dectation need 5300704850206 operations, about 53007seconds.
+4E size=13277110, 2 hop dectation need 5964203894448 operations, about 59642seconds.
+5E size=13288814, 2 hop dectation need 9070300384315 operations, about 90703seconds.
+6E size=13286643, 2 hop dectation need 6850087212317 operations, about 68500.9seconds.
+7E size=13227083, 2 hop dectation need 6124703490495 operations, about 61247seconds.
+8E size=13288814, 2 hop dectation need 8738303020620 operations, about 87383seconds.
+9E size=12335509, 2 hop dectation need 61567698703291 operations, about 615677seconds.
+tid 1: 44 E updated, 85.4465s consumed,  construct 7.86036e-07s,  cacu 51.9367s,  update 0s,  max memory cost 0MB.  max nb cnt=61927 max buckets=0 max caculation cnt=0
+tid 0: 40 E updated, 86.8285s consumed,  construct 7.86036e-07s,  cacu 62.4862s,  update 0s,  max memory cost 0MB.  max nb cnt=64284 max buckets=0 max caculation cnt=0
+tid 1: 265 E updated, 145.528s consumed,  construct 5.77047e-06s,  cacu 121.073s,  update 0s,  max memory cost 0MB.  max nb cnt=44491 max buckets=0 max caculation cnt=0
+tid 0: 279 E updated, 147.169s consumed,  construct 5.93625e-06s,  cacu 122.826s,  update 0s,  max memory cost 0MB.  max nb cnt=19416 max buckets=0 max caculation cnt=0
+tid 1: 1182 E updated, 205.53s consumed,  construct 2.82824e-05s,  cacu 181.141s,  update 0s,  max memory cost 0MB.  max nb cnt=27537 max buckets=0 max caculation cnt=0
+tid 0: 1210 E updated, 207.235s consumed,  construct 2.87462e-05s,  cacu 182.891s,  update 0s,  max memory cost 0MB.  max nb cnt=13531 max buckets=0 max caculation cnt=0
+tid 1: 3323 E updated, 265.834s consumed,  construct 0.000116594s,  cacu 241.479s,  update 0s,  max memory cost 0MB.  max nb cnt=53813 max buckets=0 max caculation cnt=0
+tid 0: 3469 E updated, 269.375s consumed,  construct 0.000121763s,  cacu 245.026s,  update 0s,  max memory cost 0MB.  max nb cnt=26732 max buckets=0 max caculation cnt=0
+tid 1: 7918 E updated, 325.844s consumed,  construct 0.000248758s,  cacu 298.104s,  update 0s,  max memory cost 0MB.  max nb cnt=33601 max buckets=0 max caculation cnt=0
+tid 0: 8788 E updated, 329.378s consumed,  construct 0.000270115s,  cacu 305.024s,  update 0s,  max memory cost 0MB.  max nb cnt=30798 max buckets=0 max caculation cnt=0
+tid 1: 15489 E updated, 385.878s consumed,  construct 0.000443302s,  cacu 361.507s,  update 0s,  max memory cost 0MB.  max nb cnt=30800 max buckets=0 max caculation cnt=0
+tid 0: 16561 E updated, 389.53s consumed,  construct 0.000467125s,  cacu 365.169s,  update 0s,  max memory cost 0MB.  max nb cnt=11032 max buckets=0 max caculation cnt=0
+tid 1: 30737 E updated, 445.883s consumed,  construct 0.000875469s,  cacu 421.509s,  update 0s,  max memory cost 0MB.  max nb cnt=17970 max buckets=0 max caculation cnt=0
+tid 0: 32112 E updated, 449.735s consumed,  construct 0.000903841s,  cacu 425.362s,  update 0s,  max memory cost 0MB.  max nb cnt=17971 max buckets=0 max caculation cnt=0
+tid 1: 50777 E updated, 505.885s consumed,  construct 0.00137597s,  cacu 481.496s,  update 0s,  max memory cost 0MB.  max nb cnt=26679 max buckets=0 max caculation cnt=0
+tid 0: 52894 E updated, 512.067s consumed,  construct 0.00142177s,  cacu 487.68s,  update 0s,  max memory cost 0MB.  max nb cnt=21809 max buckets=0 max caculation cnt=0
+tid 1: 67812 E updated, 565.901s consumed,  construct 0.00173953s,  cacu 541.503s,  update 0s,  max memory cost 0MB.  max nb cnt=24047 max buckets=0 max caculation cnt=0
+tid 0: 71707 E updated, 572.068s consumed,  construct 0.00182526s,  cacu 547.668s,  update 0s,  max memory cost 0MB.  max nb cnt=1538 max buckets=0 max caculation cnt=0
+tid 1: 86713 E updated, 625.902s consumed,  construct 0.00225203s,  cacu 601.477s,  update 0s,  max memory cost 0MB.  max nb cnt=27968 max buckets=0 max caculation cnt=0
+tid 0: 91440 E updated, 632.078s consumed,  construct 0.00235036s,  cacu 607.664s,  update 0s,  max memory cost 0MB.  max nb cnt=1586 max buckets=0 max caculation cnt=0
+tid 1: 112224 E updated, 685.904s consumed,  construct 0.0028273s,  cacu 661.45s,  update 0s,  max memory cost 0MB.  max nb cnt=53538 max buckets=0 max caculation cnt=0
+tid 0: 116109 E updated, 692.08s consumed,  construct 0.00293216s,  cacu 667.624s,  update 0s,  max memory cost 0MB.  max nb cnt=3966 max buckets=0 max caculation cnt=0
+tid 1: 155922 E updated, 745.96s consumed,  construct 0.00379824s,  cacu 721.4s,  update 0s,  max memory cost 0MB.  max nb cnt=27182 max buckets=0 max caculation cnt=0
+tid 0: 156132 E updated, 752.088s consumed,  construct 0.00380558s,  cacu 727.611s,  update 0s,  max memory cost 0MB.  max nb cnt=7143 max buckets=0 max caculation cnt=0
+tid 1: 177271 E updated, 805.977s consumed,  construct 0.00435024s,  cacu 781.457s,  update 0s,  max memory cost 0MB.  max nb cnt=8578 max buckets=0 max caculation cnt=0
+tid 0: 182789 E updated, 812.089s consumed,  construct 0.00448203s,  cacu 787.572s,  update 0s,  max memory cost 0MB.  max nb cnt=1557 max buckets=0 max caculation cnt=0
+tid 1: 256109 E updated, 865.978s consumed,  construct 0.00602771s,  cacu 841.4s,  update 0s,  max memory cost 0MB.  max nb cnt=1348 max buckets=0 max caculation cnt=0
+tid 0: 258485 E updated, 873.201s consumed,  construct 0.00607188s,  cacu 848.622s,  update 0s,  max memory cost 0MB.  max nb cnt=26674 max buckets=0 max caculation cnt=0
+tid 1: 259199 E updated, 926.051s consumed,  construct 0.00610486s,  cacu 901.379s,  update 0s,  max memory cost 0MB.  max nb cnt=42844 max buckets=0 max caculation cnt=0
+tid 0: 259531 E updated, 933.231s consumed,  construct 0.00611806s,  cacu 908.649s,  update 0s,  max memory cost 0MB.  max nb cnt=19252 max buckets=0 max caculation cnt=0
+tid 1: 271293 E updated, 986.051s consumed,  construct 0.00647461s,  cacu 961.43s,  update 0s,  max memory cost 0MB.  max nb cnt=10430 max buckets=0 max caculation cnt=0
+tid 0: 275228 E updated, 993.232s consumed,  construct 0.00654464s,  cacu 968.632s,  update 0s,  max memory cost 0MB.  max nb cnt=3788 max buckets=0 max caculation cnt=0
+tid 1: 327151 E updated, 1046.06s consumed,  construct 0.00775906s,  cacu 1021.42s,  update 0s,  max memory cost 0MB.  max nb cnt=3901 max buckets=0 max caculation cnt=0
+tid 0: 334563 E updated, 1053.27s consumed,  construct 0.00791486s,  cacu 1028.63s,  update 0s,  max memory cost 0MB.  max nb cnt=2072 max buckets=0 max caculation cnt=0
+tid 1: 410875 E updated, 1106.06s consumed,  construct 0.00964628s,  cacu 1081.37s,  update 0s,  max memory cost 0MB.  max nb cnt=1726 max buckets=0 max caculation cnt=0
+tid 0: 420120 E updated, 1113.27s consumed,  construct 0.00985468s,  cacu 1088.57s,  update 0s,  max memory cost 0MB.  max nb cnt=1005 max buckets=0 max caculation cnt=0
+tid 1: 509214 E updated, 1166.06s consumed,  construct 0.0117439s,  cacu 1141.32s,  update 0s,  max memory cost 0MB.  max nb cnt=1159 max buckets=0 max caculation cnt=0
+tid 0: 523016 E updated, 1173.28s consumed,  construct 0.0120278s,  cacu 1148.54s,  update 0s,  max memory cost 0MB.  max nb cnt=616 max buckets=0 max caculation cnt=0
+tid 1: 613180 E updated, 1231.45s consumed,  construct 0.0137652s,  cacu 1201.05s,  update 0s,  max memory cost 0MB.  max nb cnt=53538 max buckets=0 max caculation cnt=0
+tid 0: 613181 E updated, 1240.29s consumed,  construct 0.0137652s,  cacu 1215.49s,  update 0s,  max memory cost 0MB.  max nb cnt=53538 max buckets=0 max caculation cnt=0
+tid 1: 613327 E updated, 1294.42s consumed,  construct 0.0137698s,  cacu 1262.02s,  update 0s,  max memory cost 0MB.  max nb cnt=53538 max buckets=0 max caculation cnt=0
+tid 0: 613342 E updated, 1305.74s consumed,  construct 0.0137702s,  cacu 1280.95s,  update 0s,  max memory cost 0MB.  max nb cnt=44517 max buckets=0 max caculation cnt=0
+tid 1: 613385 E updated, 1354.56s consumed,  construct 0.0137713s,  cacu 1326.9s,  update 0s,  max memory cost 0MB.  max nb cnt=43865 max buckets=0 max caculation cnt=0
+tid 0: 613400 E updated, 1366.22s consumed,  construct 0.0137723s,  cacu 1341.42s,  update 0s,  max memory cost 0MB.  max nb cnt=41907 max buckets=0 max caculation cnt=0
+tid 1: 613424 E updated, 1419.06s consumed,  construct 0.0137735s,  cacu 1389.89s,  update 0s,  max memory cost 0MB.  max nb cnt=41276 max buckets=0 max caculation cnt=0
+tid 0: 613427 E updated, 1427.44s consumed,  construct 0.0137736s,  cacu 1402.65s,  update 0s,  max memory cost 0MB.  max nb cnt=38961 max buckets=0 max caculation cnt=0
+tid 1: 613523 E updated, 1484.09s consumed,  construct 0.0137775s,  cacu 1456.84s,  update 0s,  max memory cost 0MB.  max nb cnt=38190 max buckets=0 max caculation cnt=0
+tid 0: 613524 E updated, 1487.44s consumed,  construct 0.0137775s,  cacu 1462.65s,  update 0s,  max memory cost 0MB.  max nb cnt=34919 max buckets=0 max caculation cnt=0
+tid 1: 613636 E updated, 1544.42s consumed,  construct 0.0137851s,  cacu 1519.02s,  update 0s,  max memory cost 0MB.  max nb cnt=34926 max buckets=0 max caculation cnt=0
+tid 0: 613642 E updated, 1548.26s consumed,  construct 0.0137854s,  cacu 1523.47s,  update 0s,  max memory cost 0MB.  max nb cnt=18493 max buckets=0 max caculation cnt=0
+tid 1: 613756 E updated, 1606.72s consumed,  construct 0.013789s,  cacu 1578.84s,  update 0s,  max memory cost 0MB.  max nb cnt=32906 max buckets=0 max caculation cnt=0
+tid 0: 613758 E updated, 1611.33s consumed,  construct 0.013789s,  cacu 1586.53s,  update 0s,  max memory cost 0MB.  max nb cnt=30734 max buckets=0 max caculation cnt=0
+tid 1: 613893 E updated, 1669.56s consumed,  construct 0.0137922s,  cacu 1644.25s,  update 0s,  max memory cost 0MB.  max nb cnt=30140 max buckets=0 max caculation cnt=0
+tid 0: 613897 E updated, 1673.56s consumed,  construct 0.0137922s,  cacu 1648.76s,  update 0s,  max memory cost 0MB.  max nb cnt=27213 max buckets=0 max caculation cnt=0
+tid 1: 614120 E updated, 1730.77s consumed,  construct 0.0138025s,  cacu 1705.23s,  update 0s,  max memory cost 0MB.  max nb cnt=27470 max buckets=0 max caculation cnt=0
+tid 0: 614126 E updated, 1734.71s consumed,  construct 0.0138027s,  cacu 1709.91s,  update 0s,  max memory cost 0MB.  max nb cnt=23901 max buckets=0 max caculation cnt=0
+tid 1: 614464 E updated, 1790.82s consumed,  construct 0.0138171s,  cacu 1765.06s,  update 0s,  max memory cost 0MB.  max nb cnt=23915 max buckets=0 max caculation cnt=0
+tid 0: 614480 E updated, 1795.41s consumed,  construct 0.0138172s,  cacu 1770.6s,  update 0s,  max memory cost 0MB.  max nb cnt=19723 max buckets=0 max caculation cnt=0
+tid 1: 614757 E updated, 1851.01s consumed,  construct 0.0138279s,  cacu 1825.88s,  update 0s,  max memory cost 0MB.  max nb cnt=19386 max buckets=0 max caculation cnt=0
+tid 0: 614808 E updated, 1855.43s consumed,  construct 0.0138301s,  cacu 1830.62s,  update 0s,  max memory cost 0MB.  max nb cnt=15450 max buckets=0 max caculation cnt=0
+tid 1: 615304 E updated, 1911.08s consumed,  construct 0.0138469s,  cacu 1885.35s,  update 0s,  max memory cost 0MB.  max nb cnt=16704 max buckets=0 max caculation cnt=0
+tid 0: 615340 E updated, 1915.89s consumed,  construct 0.0138484s,  cacu 1891.07s,  update 0s,  max memory cost 0MB.  max nb cnt=13646 max buckets=0 max caculation cnt=0
+tid 1: 615922 E updated, 1971.49s consumed,  construct 0.0138677s,  cacu 1945.78s,  update 0s,  max memory cost 0MB.  max nb cnt=13311 max buckets=0 max caculation cnt=0
+tid 0: 616015 E updated, 1975.89s consumed,  construct 0.0138728s,  cacu 1951.07s,  update 0s,  max memory cost 0MB.  max nb cnt=11554 max buckets=0 max caculation cnt=0
+tid 1: 616975 E updated, 2031.51s consumed,  construct 0.0139045s,  cacu 2006.64s,  update 0s,  max memory cost 0MB.  max nb cnt=24122 max buckets=0 max caculation cnt=0
+tid 0: 617036 E updated, 2035.99s consumed,  construct 0.0139073s,  cacu 2011.16s,  update 0s,  max memory cost 0MB.  max nb cnt=6404 max buckets=0 max caculation cnt=0
+tid 1: 618231 E updated, 2091.64s consumed,  construct 0.0139535s,  cacu 2066.66s,  update 0s,  max memory cost 0MB.  max nb cnt=23056 max buckets=0 max caculation cnt=0
+tid 0: 618336 E updated, 2096.11s consumed,  construct 0.0139579s,  cacu 2071.27s,  update 0s,  max memory cost 0MB.  max nb cnt=7636 max buckets=0 max caculation cnt=0
+tid 1: 620171 E updated, 2151.67s consumed,  construct 0.0140325s,  cacu 2126.75s,  update 0s,  max memory cost 0MB.  max nb cnt=11822 max buckets=0 max caculation cnt=0
+tid 0: 620471 E updated, 2156.17s consumed,  construct 0.0140472s,  cacu 2131.32s,  update 0s,  max memory cost 0MB.  max nb cnt=7505 max buckets=0 max caculation cnt=0
+tid 1: 623241 E updated, 2211.68s consumed,  construct 0.0141693s,  cacu 2186.76s,  update 0s,  max memory cost 0MB.  max nb cnt=10541 max buckets=0 max caculation cnt=0
+tid 0: 623638 E updated, 2216.18s consumed,  construct 0.0141849s,  cacu 2191.32s,  update 0s,  max memory cost 0MB.  max nb cnt=8859 max buckets=0 max caculation cnt=0
+tid 1: 628526 E updated, 2271.86s consumed,  construct 0.0143805s,  cacu 2246.71s,  update 0s,  max memory cost 0MB.  max nb cnt=19105 max buckets=0 max caculation cnt=0
+tid 0: 628955 E updated, 2276.23s consumed,  construct 0.0143957s,  cacu 2251.35s,  update 0s,  max memory cost 0MB.  max nb cnt=16725 max buckets=0 max caculation cnt=0
+tid 1: 634355 E updated, 2331.87s consumed,  construct 0.0146071s,  cacu 2306.94s,  update 0s,  max memory cost 0MB.  max nb cnt=15658 max buckets=0 max caculation cnt=0
+tid 0: 635080 E updated, 2336.23s consumed,  construct 0.0146498s,  cacu 2311.33s,  update 0s,  max memory cost 0MB.  max nb cnt=10574 max buckets=0 max caculation cnt=0
+tid 1: 641555 E updated, 2391.89s consumed,  construct 0.0149046s,  cacu 2366.97s,  update 0s,  max memory cost 0MB.  max nb cnt=14189 max buckets=0 max caculation cnt=0
+tid 0: 642002 E updated, 2396.23s consumed,  construct 0.0149179s,  cacu 2371.31s,  update 0s,  max memory cost 0MB.  max nb cnt=8664 max buckets=0 max caculation cnt=0
+tid 1: 647636 E updated, 2451.9s consumed,  construct 0.0151026s,  cacu 2426.93s,  update 0s,  max memory cost 0MB.  max nb cnt=10728 max buckets=0 max caculation cnt=0
+tid 0: 648105 E updated, 2456.24s consumed,  construct 0.0151167s,  cacu 2431.3s,  update 0s,  max memory cost 0MB.  max nb cnt=6595 max buckets=0 max caculation cnt=0
+tid 1: 655721 E updated, 2511.97s consumed,  construct 0.0153191s,  cacu 2486.97s,  update 0s,  max memory cost 0MB.  max nb cnt=7718 max buckets=0 max caculation cnt=0
+tid 0: 656314 E updated, 2516.25s consumed,  construct 0.0153359s,  cacu 2491.28s,  update 0s,  max memory cost 0MB.  max nb cnt=7299 max buckets=0 max caculation cnt=0
+tid 1: 665608 E updated, 2571.97s consumed,  construct 0.0156044s,  cacu 2546.99s,  update 0s,  max memory cost 0MB.  max nb cnt=9934 max buckets=0 max caculation cnt=0
+tid 0: 666158 E updated, 2576.25s consumed,  construct 0.015625s,  cacu 2551.27s,  update 0s,  max memory cost 0MB.  max nb cnt=7541 max buckets=0 max caculation cnt=0
+tid 1: 679382 E updated, 2631.98s consumed,  construct 0.0159791s,  cacu 2606.97s,  update 0s,  max memory cost 0MB.  max nb cnt=9502 max buckets=0 max caculation cnt=0
+tid 0: 680172 E updated, 2636.26s consumed,  construct 0.0160078s,  cacu 2611.25s,  update 0s,  max memory cost 0MB.  max nb cnt=8956 max buckets=0 max caculation cnt=0
+tid 1: 694312 E updated, 2692.06s consumed,  construct 0.0163569s,  cacu 2667.02s,  update 0s,  max memory cost 0MB.  max nb cnt=8821 max buckets=0 max caculation cnt=0
+tid 0: 695599 E updated, 2696.26s consumed,  construct 0.0163848s,  cacu 2671.24s,  update 0s,  max memory cost 0MB.  max nb cnt=5818 max buckets=0 max caculation cnt=0
+tid 1: 718771 E updated, 2752.07s consumed,  construct 0.0169044s,  cacu 2726.96s,  update 0s,  max memory cost 0MB.  max nb cnt=8219 max buckets=0 max caculation cnt=0
+tid 0: 720954 E updated, 2756.27s consumed,  construct 0.0169642s,  cacu 2731.21s,  update 0s,  max memory cost 0MB.  max nb cnt=6684 max buckets=0 max caculation cnt=0
+tid 1: 743371 E updated, 2812.07s consumed,  construct 0.0174855s,  cacu 2786.98s,  update 0s,  max memory cost 0MB.  max nb cnt=8702 max buckets=0 max caculation cnt=0
+tid 0: 744713 E updated, 2816.27s consumed,  construct 0.0175233s,  cacu 2791.17s,  update 0s,  max memory cost 0MB.  max nb cnt=8312 max buckets=0 max caculation cnt=0
+tid 1: 764157 E updated, 2872.08s consumed,  construct 0.0180789s,  cacu 2846.95s,  update 0s,  max memory cost 0MB.  max nb cnt=7625 max buckets=0 max caculation cnt=0
+tid 0: 765228 E updated, 2876.3s consumed,  construct 0.0181141s,  cacu 2851.18s,  update 0s,  max memory cost 0MB.  max nb cnt=7008 max buckets=0 max caculation cnt=0
+tid 1: 779632 E updated, 2932.08s consumed,  construct 0.0184983s,  cacu 2906.95s,  update 0s,  max memory cost 0MB.  max nb cnt=7599 max buckets=0 max caculation cnt=0
+tid 0: 781217 E updated, 2936.3s consumed,  construct 0.0185384s,  cacu 2911.17s,  update 0s,  max memory cost 0MB.  max nb cnt=4995 max buckets=0 max caculation cnt=0
+tid 1: 802345 E updated, 2992.08s consumed,  construct 0.0190661s,  cacu 2966.85s,  update 0s,  max memory cost 0MB.  max nb cnt=7540 max buckets=0 max caculation cnt=0
+tid 0: 803735 E updated, 2996.31s consumed,  construct 0.019099s,  cacu 2971.14s,  update 0s,  max memory cost 0MB.  max nb cnt=1981 max buckets=0 max caculation cnt=0
+tid 1: 825322 E updated, 3052.09s consumed,  construct 0.0195483s,  cacu 3026.9s,  update 0s,  max memory cost 0MB.  max nb cnt=6287 max buckets=0 max caculation cnt=0
+tid 0: 826612 E updated, 3056.4s consumed,  construct 0.0195861s,  cacu 3031.21s,  update 0s,  max memory cost 0MB.  max nb cnt=3456 max buckets=0 max caculation cnt=0
+tid 1: 845839 E updated, 3112.09s consumed,  construct 0.0199015s,  cacu 3086.84s,  update 0s,  max memory cost 0MB.  max nb cnt=5399 max buckets=0 max caculation cnt=0
+tid 0: 847929 E updated, 3116.4s consumed,  construct 0.0199369s,  cacu 3091.19s,  update 0s,  max memory cost 0MB.  max nb cnt=3905 max buckets=0 max caculation cnt=0
+tid 1: 876722 E updated, 3172.09s consumed,  construct 0.0203459s,  cacu 3146.82s,  update 0s,  max memory cost 0MB.  max nb cnt=6423 max buckets=0 max caculation cnt=0
+tid 0: 878232 E updated, 3176.41s consumed,  construct 0.0203652s,  cacu 3151.18s,  update 0s,  max memory cost 0MB.  max nb cnt=4167 max buckets=0 max caculation cnt=0
+tid 1: 899496 E updated, 3232.1s consumed,  construct 0.0206395s,  cacu 3206.82s,  update 0s,  max memory cost 0MB.  max nb cnt=4772 max buckets=0 max caculation cnt=0
+tid 0: 900421 E updated, 3236.42s consumed,  construct 0.020651s,  cacu 3211.17s,  update 0s,  max memory cost 0MB.  max nb cnt=3286 max buckets=0 max caculation cnt=0
+tid 1: 919111 E updated, 3292.11s consumed,  construct 0.0208281s,  cacu 3266.84s,  update 0s,  max memory cost 0MB.  max nb cnt=4604 max buckets=0 max caculation cnt=0
+tid 0: 921549 E updated, 3296.42s consumed,  construct 0.0208524s,  cacu 3271.17s,  update 0s,  max memory cost 0MB.  max nb cnt=4249 max buckets=0 max caculation cnt=0
+tid 1: 959590 E updated, 3352.13s consumed,  construct 0.021141s,  cacu 3326.86s,  update 0s,  max memory cost 0MB.  max nb cnt=4629 max buckets=0 max caculation cnt=0
+tid 0: 964495 E updated, 3356.42s consumed,  construct 0.0211815s,  cacu 3331.16s,  update 0s,  max memory cost 0MB.  max nb cnt=3913 max buckets=0 max caculation cnt=0
+tid 1: 1033553 E updated, 3412.14s consumed,  construct 0.0216907s,  cacu 3386.85s,  update 0s,  max memory cost 0MB.  max nb cnt=4424 max buckets=0 max caculation cnt=0
+tid 0: 1036378 E updated, 3416.45s consumed,  construct 0.0217149s,  cacu 3391.16s,  update 0s,  max memory cost 0MB.  max nb cnt=2046 max buckets=0 max caculation cnt=0
+tid 1: 1064930 E updated, 3472.15s consumed,  construct 0.0219786s,  cacu 3446.82s,  update 0s,  max memory cost 0MB.  max nb cnt=3462 max buckets=0 max caculation cnt=0
+tid 0: 1065819 E updated, 3476.54s consumed,  construct 0.0219983s,  cacu 3451.23s,  update 0s,  max memory cost 0MB.  max nb cnt=1768 max buckets=0 max caculation cnt=0
+tid 1: 1078169 E updated, 3532.16s consumed,  construct 0.0221748s,  cacu 3506.84s,  update 0s,  max memory cost 0MB.  max nb cnt=3675 max buckets=0 max caculation cnt=0
+tid 0: 1079277 E updated, 3536.55s consumed,  construct 0.0221914s,  cacu 3511.24s,  update 0s,  max memory cost 0MB.  max nb cnt=1900 max buckets=0 max caculation cnt=0
+tid 1: 1103316 E updated, 3592.16s consumed,  construct 0.022519s,  cacu 3566.83s,  update 0s,  max memory cost 0MB.  max nb cnt=3220 max buckets=0 max caculation cnt=0
+tid 0: 1105569 E updated, 3596.56s consumed,  construct 0.0225445s,  cacu 3571.23s,  update 0s,  max memory cost 0MB.  max nb cnt=2461 max buckets=0 max caculation cnt=0
+tid 1: 1146478 E updated, 3652.18s consumed,  construct 0.0229014s,  cacu 3626.83s,  update 0s,  max memory cost 0MB.  max nb cnt=3307 max buckets=0 max caculation cnt=0
+tid 0: 1148449 E updated, 3656.61s consumed,  construct 0.0229279s,  cacu 3631.26s,  update 0s,  max memory cost 0MB.  max nb cnt=3483 max buckets=0 max caculation cnt=0
+tid 1: 1191332 E updated, 3712.19s consumed,  construct 0.0233841s,  cacu 3686.77s,  update 0s,  max memory cost 0MB.  max nb cnt=3455 max buckets=0 max caculation cnt=0
+tid 0: 1194667 E updated, 3716.63s consumed,  construct 0.0234289s,  cacu 3691.26s,  update 0s,  max memory cost 0MB.  max nb cnt=2247 max buckets=0 max caculation cnt=0
+tid 1: 1242950 E updated, 3772.2s consumed,  construct 0.0238654s,  cacu 3746.77s,  update 0s,  max memory cost 0MB.  max nb cnt=3001 max buckets=0 max caculation cnt=0
+tid 0: 1247277 E updated, 3776.63s consumed,  construct 0.0239195s,  cacu 3751.21s,  update 0s,  max memory cost 0MB.  max nb cnt=1893 max buckets=0 max caculation cnt=0
+tid 1: 1300552 E updated, 3832.2s consumed,  construct 0.0244237s,  cacu 3806.74s,  update 0s,  max memory cost 0MB.  max nb cnt=2711 max buckets=0 max caculation cnt=0
+tid 0: 1305235 E updated, 3836.63s consumed,  construct 0.024486s,  cacu 3811.17s,  update 0s,  max memory cost 0MB.  max nb cnt=1649 max buckets=0 max caculation cnt=0
+tid 1: 1356380 E updated, 3892.2s consumed,  construct 0.0249734s,  cacu 3866.7s,  update 0s,  max memory cost 0MB.  max nb cnt=3226 max buckets=0 max caculation cnt=0
+tid 0: 1361993 E updated, 3896.63s consumed,  construct 0.025027s,  cacu 3871.14s,  update 0s,  max memory cost 0MB.  max nb cnt=2163 max buckets=0 max caculation cnt=0
+tid 1: 1428014 E updated, 3952.23s consumed,  construct 0.0256724s,  cacu 3926.7s,  update 0s,  max memory cost 0MB.  max nb cnt=2476 max buckets=0 max caculation cnt=0
+tid 0: 1434094 E updated, 3956.65s consumed,  construct 0.0257296s,  cacu 3931.12s,  update 0s,  max memory cost 0MB.  max nb cnt=2260 max buckets=0 max caculation cnt=0
+tid 1: 1535038 E updated, 4012.24s consumed,  construct 0.0264521s,  cacu 3986.66s,  update 0s,  max memory cost 0MB.  max nb cnt=2321 max buckets=0 max caculation cnt=0
+tid 0: 1541754 E updated, 4016.66s consumed,  construct 0.0264855s,  cacu 3991.09s,  update 0s,  max memory cost 0MB.  max nb cnt=1337 max buckets=0 max caculation cnt=0
+tid 1: 1669823 E updated, 4072.24s consumed,  construct 0.027292s,  cacu 4046.63s,  update 0s,  max memory cost 0MB.  max nb cnt=2257 max buckets=0 max caculation cnt=0
+tid 0: 1683376 E updated, 4076.66s consumed,  construct 0.0273499s,  cacu 4051.05s,  update 0s,  max memory cost 0MB.  max nb cnt=2275 max buckets=0 max caculation cnt=0
+tid 1: 1893159 E updated, 4132.24s consumed,  construct 0.0283021s,  cacu 4106.56s,  update 0s,  max memory cost 0MB.  max nb cnt=3118 max buckets=0 max caculation cnt=0
+tid 0: 1909802 E updated, 4136.67s consumed,  construct 0.0283619s,  cacu 4110.99s,  update 0s,  max memory cost 0MB.  max nb cnt=1594 max buckets=0 max caculation cnt=0
+tid 1: 2156105 E updated, 4192.24s consumed,  construct 0.029526s,  cacu 4166.47s,  update 0s,  max memory cost 0MB.  max nb cnt=2005 max buckets=0 max caculation cnt=0
+tid 0: 2175931 E updated, 4196.68s consumed,  construct 0.0295993s,  cacu 4170.93s,  update 0s,  max memory cost 0MB.  max nb cnt=1521 max buckets=0 max caculation cnt=0
+tid 1: 2504715 E updated, 4252.24s consumed,  construct 0.0307698s,  cacu 4226.36s,  update 0s,  max memory cost 0MB.  max nb cnt=2812 max buckets=0 max caculation cnt=0
+tid 0: 2532531 E updated, 4256.68s consumed,  construct 0.0308716s,  cacu 4230.81s,  update 0s,  max memory cost 0MB.  max nb cnt=1411 max buckets=0 max caculation cnt=0
+tid 1: 2910986 E updated, 4312.25s consumed,  construct 0.0319548s,  cacu 4286.27s,  update 0s,  max memory cost 0MB.  max nb cnt=1804 max buckets=0 max caculation cnt=0
+tid 0: 2943950 E updated, 4316.7s consumed,  construct 0.0320466s,  cacu 4290.7s,  update 0s,  max memory cost 0MB.  max nb cnt=1785 max buckets=0 max caculation cnt=0
+tid 1: 3462889 E updated, 4372.25s consumed,  construct 0.0331949s,  cacu 4346.14s,  update 0s,  max memory cost 0MB.  max nb cnt=2074 max buckets=0 max caculation cnt=0
+tid 0: 3526356 E updated, 4376.7s consumed,  construct 0.0332566s,  cacu 4350.58s,  update 0s,  max memory cost 0MB.  max nb cnt=1341 max buckets=0 max caculation cnt=0
+tid 1: 4679987 E updated, 4432.26s consumed,  construct 0.034099s,  cacu 4405.99s,  update 0s,  max memory cost 0MB.  max nb cnt=1775 max buckets=0 max caculation cnt=0
+tid 0: 4825781 E updated, 4436.7s consumed,  construct 0.0341699s,  cacu 4410.42s,  update 0s,  max memory cost 0MB.  max nb cnt=1282 max buckets=0 max caculation cnt=0
+multi-thread E reduction finished 
