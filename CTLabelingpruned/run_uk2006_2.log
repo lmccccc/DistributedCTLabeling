@@ -1,0 +1,7 @@
+nohup: ignoring input
+in dir=/mnt/data/lmc/uk2006
+bp dir=/mnt/data/lmc/uk2006_bp
+out dir=/mnt/data/lmc/uk2006_label
+core graph dir=/mnt/data/lmc/uk2006_tmp
+max width=120
+threads=2

@@ -1,0 +1,357 @@
+nohup: ignoring input
+in dir=/mnt/data/lmc/uk2006
+bp dir=/mnt/data/lmc/uk2006_bp
+out dir=/mnt/data/lmc/uk2006_label
+core graph dir=/mnt/data/lmc/uk2006_tmp
+max width=250
+threads=2
+Load Time : 94.800417 seconds
+* #{blocks} = 10, #{vertices} = 77449748
+ loading bp 
+ load bp suc 
+n=7822423
+0 local node=7822423, local edge cnt=707875428
+1 local node=7820757, local edge cnt=548853548
+2 local node=7818553, local edge cnt=610294054
+3 local node=7477805, local edge cnt=808040218
+4 local node=7469063, local edge cnt=561714982
+5 local node=7822423, local edge cnt=255557178
+6 local node=7785059, local edge cnt=345362910
+7 local node=7822423, local edge cnt=400955830
+8 local node=7788822, local edge cnt=529750866
+9 local node=7822420, local edge cnt=497836034
+0 Initializing q... 
+0 t=4.3709 secs
+0 Initializing E...
+0 t=24.1601 secs
+0 Reducing Graph...
+546095 nodes reduced, score[x]=2, remaining size=93.019% t=24.749 secs, bp query cost 0.000 secs
+911696 nodes reduced, score[x]=3, remaining size=88.345% t=25.306 secs, bp query cost 0.000 secs
+1161697 nodes reduced, score[x]=4, remaining size=85.149% t=25.891 secs, bp query cost 0.000 secs
+1361698 nodes reduced, score[x]=5, remaining size=82.592% t=26.420 secs, bp query cost 0.000 secs
+1509859 nodes reduced, score[x]=7, remaining size=80.698% t=26.893 secs, bp query cost 0.000 secs
+1634860 nodes reduced, score[x]=8, remaining size=79.100% t=27.362 secs, bp query cost 0.000 secs
+1745972 nodes reduced, score[x]=9, remaining size=77.680% t=27.809 secs, bp query cost 0.000 secs
+1852076 nodes reduced, score[x]=10, remaining size=76.323% t=28.305 secs, bp query cost 0.000 secs
+1949204 nodes reduced, score[x]=11, remaining size=75.082% t=28.863 secs, bp query cost 0.000 secs
+2040114 nodes reduced, score[x]=11, remaining size=73.920% t=29.356 secs, bp query cost 0.000 secs
+2123448 nodes reduced, score[x]=12, remaining size=72.854% t=29.901 secs, bp query cost 0.000 secs
+2200372 nodes reduced, score[x]=13, remaining size=71.871% t=30.388 secs, bp query cost 0.000 secs
+2271801 nodes reduced, score[x]=14, remaining size=70.958% t=30.882 secs, bp query cost 0.000 secs
+2338468 nodes reduced, score[x]=15, remaining size=70.106% t=31.443 secs, bp query cost 0.000 secs
+2400969 nodes reduced, score[x]=16, remaining size=69.307% t=31.992 secs, bp query cost 0.000 secs
+2459793 nodes reduced, score[x]=17, remaining size=68.555% t=32.576 secs, bp query cost 0.000 secs
+2515349 nodes reduced, score[x]=18, remaining size=67.844% t=33.071 secs, bp query cost 0.000 secs
+2570905 nodes reduced, score[x]=18, remaining size=67.134% t=33.454 secs, bp query cost 0.000 secs
+2623537 nodes reduced, score[x]=19, remaining size=66.461% t=33.958 secs, bp query cost 0.000 secs
+2676169 nodes reduced, score[x]=19, remaining size=65.788% t=34.436 secs, bp query cost 0.000 secs
+2726170 nodes reduced, score[x]=20, remaining size=65.149% t=35.132 secs, bp query cost 0.000 secs
+2773790 nodes reduced, score[x]=21, remaining size=64.541% t=35.634 secs, bp query cost 0.000 secs
+2819245 nodes reduced, score[x]=22, remaining size=63.959% t=36.150 secs, bp query cost 0.000 secs
+2864700 nodes reduced, score[x]=22, remaining size=63.378% t=36.544 secs, bp query cost 0.000 secs
+2908179 nodes reduced, score[x]=23, remaining size=62.823% t=37.140 secs, bp query cost 0.000 secs
+2951658 nodes reduced, score[x]=23, remaining size=62.267% t=37.429 secs, bp query cost 0.000 secs
+2995137 nodes reduced, score[x]=23, remaining size=61.711% t=37.975 secs, bp query cost 0.000 secs
+3036804 nodes reduced, score[x]=24, remaining size=61.178% t=38.590 secs, bp query cost 0.000 secs
+3076805 nodes reduced, score[x]=25, remaining size=60.667% t=39.188 secs, bp query cost 0.000 secs
+3115267 nodes reduced, score[x]=26, remaining size=60.175% t=39.949 secs, bp query cost 0.000 secs
+3153729 nodes reduced, score[x]=26, remaining size=59.683% t=40.392 secs, bp query cost 0.000 secs
+3192007 nodes reduced, score[x]=27, remaining size=59.194% t=40.982 secs, bp query cost 0.000 secs
+3229048 nodes reduced, score[x]=27, remaining size=58.721% t=41.541 secs, bp query cost 0.000 secs
+3266086 nodes reduced, score[x]=27, remaining size=58.247% t=41.980 secs, bp query cost 0.000 secs
+3301801 nodes reduced, score[x]=28, remaining size=57.791% t=42.723 secs, bp query cost 0.000 secs
+3337516 nodes reduced, score[x]=28, remaining size=57.334% t=43.076 secs, bp query cost 0.000 secs
+3371999 nodes reduced, score[x]=29, remaining size=56.893% t=43.941 secs, bp query cost 0.000 secs
+3406482 nodes reduced, score[x]=29, remaining size=56.452% t=44.539 secs, bp query cost 0.000 secs
+3439816 nodes reduced, score[x]=30, remaining size=56.026% t=45.133 secs, bp query cost 0.000 secs
+3473151 nodes reduced, score[x]=30, remaining size=55.600% t=45.558 secs, bp query cost 0.000 secs
+3505410 nodes reduced, score[x]=31, remaining size=55.188% t=46.324 secs, bp query cost 0.000 secs
+3537669 nodes reduced, score[x]=31, remaining size=54.775% t=46.851 secs, bp query cost 0.000 secs
+3569928 nodes reduced, score[x]=31, remaining size=54.363% t=47.221 secs, bp query cost 0.000 secs
+3601179 nodes reduced, score[x]=32, remaining size=53.963% t=48.042 secs, bp query cost 0.000 secs
+3631483 nodes reduced, score[x]=33, remaining size=53.576% t=48.828 secs, bp query cost 0.000 secs
+3661787 nodes reduced, score[x]=33, remaining size=53.189% t=49.300 secs, bp query cost 0.000 secs
+3691309 nodes reduced, score[x]=34, remaining size=52.811% t=50.032 secs, bp query cost 0.000 secs
+3720721 nodes reduced, score[x]=34, remaining size=52.435% t=50.477 secs, bp query cost 0.000 secs
+3750133 nodes reduced, score[x]=34, remaining size=52.059% t=51.273 secs, bp query cost 0.000 secs
+3778705 nodes reduced, score[x]=35, remaining size=51.694% t=51.738 secs, bp query cost 0.000 secs
+3806781 nodes reduced, score[x]=36, remaining size=51.335% t=52.510 secs, bp query cost 0.000 secs
+3834560 nodes reduced, score[x]=36, remaining size=50.980% t=53.061 secs, bp query cost 0.000 secs
+3861588 nodes reduced, score[x]=37, remaining size=50.634% t=53.946 secs, bp query cost 0.000 secs
+3888616 nodes reduced, score[x]=37, remaining size=50.289% t=54.392 secs, bp query cost 0.000 secs
+3915649 nodes reduced, score[x]=37, remaining size=49.943% t=55.104 secs, bp query cost 0.000 secs
+3941965 nodes reduced, score[x]=38, remaining size=49.607% t=55.636 secs, bp query cost 0.000 secs
+3968281 nodes reduced, score[x]=38, remaining size=49.270% t=55.981 secs, bp query cost 0.000 secs
+3993923 nodes reduced, score[x]=39, remaining size=48.943% t=56.936 secs, bp query cost 0.000 secs
+4019565 nodes reduced, score[x]=39, remaining size=48.615% t=57.829 secs, bp query cost 0.000 secs
+4044566 nodes reduced, score[x]=40, remaining size=48.295% t=58.517 secs, bp query cost 0.000 secs
+4068957 nodes reduced, score[x]=41, remaining size=47.983% t=59.578 secs, bp query cost 0.000 secs
+4092767 nodes reduced, score[x]=42, remaining size=47.679% t=60.563 secs, bp query cost 0.000 secs
+4116023 nodes reduced, score[x]=43, remaining size=47.382% t=61.333 secs, bp query cost 0.000 secs
+4139279 nodes reduced, score[x]=43, remaining size=47.084% t=61.857 secs, bp query cost 0.000 secs
+4162007 nodes reduced, score[x]=44, remaining size=46.794% t=62.675 secs, bp query cost 0.000 secs
+4184737 nodes reduced, score[x]=44, remaining size=46.503% t=63.412 secs, bp query cost 0.000 secs
+4206961 nodes reduced, score[x]=45, remaining size=46.219% t=64.096 secs, bp query cost 0.000 secs
+4229184 nodes reduced, score[x]=45, remaining size=45.935% t=64.534 secs, bp query cost 0.000 secs
+4250924 nodes reduced, score[x]=46, remaining size=45.657% t=65.631 secs, bp query cost 0.000 secs
+4272664 nodes reduced, score[x]=46, remaining size=45.379% t=66.336 secs, bp query cost 0.000 secs
+4293941 nodes reduced, score[x]=47, remaining size=45.107% t=67.476 secs, bp query cost 0.000 secs
+4314775 nodes reduced, score[x]=48, remaining size=44.841% t=68.596 secs, bp query cost 0.000 secs
+4335610 nodes reduced, score[x]=48, remaining size=44.575% t=69.224 secs, bp query cost 0.000 secs
+4356019 nodes reduced, score[x]=49, remaining size=44.314% t=70.330 secs, bp query cost 0.000 secs
+4376020 nodes reduced, score[x]=50, remaining size=44.058% t=71.337 secs, bp query cost 0.000 secs
+4395628 nodes reduced, score[x]=51, remaining size=43.807% t=72.395 secs, bp query cost 0.000 secs
+4415237 nodes reduced, score[x]=51, remaining size=43.557% t=72.956 secs, bp query cost 0.000 secs
+4434469 nodes reduced, score[x]=52, remaining size=43.311% t=74.034 secs, bp query cost 0.000 secs
+4453337 nodes reduced, score[x]=53, remaining size=43.070% t=75.067 secs, bp query cost 0.000 secs
+4471856 nodes reduced, score[x]=54, remaining size=42.833% t=76.140 secs, bp query cost 0.000 secs
+4490375 nodes reduced, score[x]=54, remaining size=42.596% t=76.418 secs, bp query cost 0.000 secs
+4508895 nodes reduced, score[x]=54, remaining size=42.359% t=76.854 secs, bp query cost 0.000 secs
+4527077 nodes reduced, score[x]=55, remaining size=42.127% t=77.841 secs, bp query cost 0.000 secs
+4545259 nodes reduced, score[x]=55, remaining size=41.894% t=78.211 secs, bp query cost 0.000 secs
+4563132 nodes reduced, score[x]=56, remaining size=41.666% t=79.296 secs, bp query cost 0.000 secs
+4580991 nodes reduced, score[x]=56, remaining size=41.438% t=79.722 secs, bp query cost 0.000 secs
+4598849 nodes reduced, score[x]=56, remaining size=41.209% t=80.299 secs, bp query cost 0.000 secs
+4616393 nodes reduced, score[x]=57, remaining size=40.985% t=81.422 secs, bp query cost 0.000 secs
+4633635 nodes reduced, score[x]=58, remaining size=40.765% t=82.398 secs, bp query cost 0.000 secs
+4650914 nodes reduced, score[x]=58, remaining size=40.544% t=82.946 secs, bp query cost 0.000 secs
+4667864 nodes reduced, score[x]=59, remaining size=40.327% t=83.357 secs, bp query cost 0.000 secs
+4684531 nodes reduced, score[x]=60, remaining size=40.114% t=84.028 secs, bp query cost 0.000 secs
+4700925 nodes reduced, score[x]=61, remaining size=39.904% t=84.674 secs, bp query cost 0.000 secs
+4717056 nodes reduced, score[x]=62, remaining size=39.698% t=85.373 secs, bp query cost 0.000 secs
+4732930 nodes reduced, score[x]=63, remaining size=39.495% t=86.080 secs, bp query cost 0.000 secs
+4748557 nodes reduced, score[x]=64, remaining size=39.296% t=86.806 secs, bp query cost 0.000 secs
+4763942 nodes reduced, score[x]=65, remaining size=39.099% t=87.602 secs, bp query cost 0.000 secs
+4779094 nodes reduced, score[x]=66, remaining size=38.905% t=88.178 secs, bp query cost 0.000 secs
+4794021 nodes reduced, score[x]=67, remaining size=38.714% t=88.852 secs, bp query cost 0.000 secs
+4808727 nodes reduced, score[x]=68, remaining size=38.526% t=89.586 secs, bp query cost 0.000 secs
+4823220 nodes reduced, score[x]=69, remaining size=38.341% t=90.438 secs, bp query cost 0.000 secs
+4837506 nodes reduced, score[x]=70, remaining size=38.158% t=91.146 secs, bp query cost 0.000 secs
+4851596 nodes reduced, score[x]=71, remaining size=37.978% t=91.678 secs, bp query cost 0.000 secs
+4865296 nodes reduced, score[x]=73, remaining size=37.803% t=92.509 secs, bp query cost 0.000 secs
+4878812 nodes reduced, score[x]=74, remaining size=37.630% t=93.265 secs, bp query cost 0.000 secs
+4892146 nodes reduced, score[x]=75, remaining size=37.460% t=93.964 secs, bp query cost 0.000 secs
+4905306 nodes reduced, score[x]=76, remaining size=37.292% t=94.839 secs, bp query cost 0.000 secs
+4918294 nodes reduced, score[x]=77, remaining size=37.126% t=95.192 secs, bp query cost 0.000 secs
+4931116 nodes reduced, score[x]=78, remaining size=36.962% t=95.844 secs, bp query cost 0.000 secs
+4943937 nodes reduced, score[x]=78, remaining size=36.798% t=96.070 secs, bp query cost 0.000 secs
+4956596 nodes reduced, score[x]=79, remaining size=36.636% t=96.660 secs, bp query cost 0.000 secs
+4969256 nodes reduced, score[x]=79, remaining size=36.474% t=96.891 secs, bp query cost 0.000 secs
+4981757 nodes reduced, score[x]=80, remaining size=36.314% t=97.508 secs, bp query cost 0.000 secs
+4994258 nodes reduced, score[x]=80, remaining size=36.155% t=97.724 secs, bp query cost 0.000 secs
+5006604 nodes reduced, score[x]=81, remaining size=35.997% t=98.403 secs, bp query cost 0.000 secs
+5018803 nodes reduced, score[x]=82, remaining size=35.841% t=99.136 secs, bp query cost 0.000 secs
+5030874 nodes reduced, score[x]=83, remaining size=35.687% t=99.925 secs, bp query cost 0.000 secs
+5042779 nodes reduced, score[x]=84, remaining size=35.534% t=100.657 secs, bp query cost 0.000 secs
+5054544 nodes reduced, score[x]=85, remaining size=35.384% t=101.301 secs, bp query cost 0.000 secs
+5066309 nodes reduced, score[x]=85, remaining size=35.234% t=101.453 secs, bp query cost 0.000 secs
+5078080 nodes reduced, score[x]=85, remaining size=35.083% t=101.630 secs, bp query cost 0.000 secs
+5089708 nodes reduced, score[x]=86, remaining size=34.934% t=102.256 secs, bp query cost 0.000 secs
+5101203 nodes reduced, score[x]=87, remaining size=34.787% t=102.956 secs, bp query cost 0.000 secs
+5112570 nodes reduced, score[x]=88, remaining size=34.642% t=103.931 secs, bp query cost 0.000 secs
+5123682 nodes reduced, score[x]=90, remaining size=34.500% t=104.681 secs, bp query cost 0.000 secs
+5134794 nodes reduced, score[x]=90, remaining size=34.358% t=104.814 secs, bp query cost 0.000 secs
+5145906 nodes reduced, score[x]=90, remaining size=34.216% t=104.948 secs, bp query cost 0.000 secs
+5157018 nodes reduced, score[x]=90, remaining size=34.074% t=105.087 secs, bp query cost 0.000 secs
+5168130 nodes reduced, score[x]=90, remaining size=33.932% t=105.235 secs, bp query cost 0.000 secs
+5179242 nodes reduced, score[x]=90, remaining size=33.790% t=105.401 secs, bp query cost 0.000 secs
+5190354 nodes reduced, score[x]=90, remaining size=33.648% t=105.532 secs, bp query cost 0.000 secs
+5201466 nodes reduced, score[x]=90, remaining size=33.506% t=105.682 secs, bp query cost 0.000 secs
+5212578 nodes reduced, score[x]=90, remaining size=33.364% t=105.831 secs, bp query cost 0.000 secs
+5223690 nodes reduced, score[x]=90, remaining size=33.222% t=105.964 secs, bp query cost 0.000 secs
+5234802 nodes reduced, score[x]=90, remaining size=33.080% t=106.104 secs, bp query cost 0.000 secs
+5245914 nodes reduced, score[x]=90, remaining size=32.937% t=106.235 secs, bp query cost 0.000 secs
+5257026 nodes reduced, score[x]=90, remaining size=32.795% t=106.384 secs, bp query cost 0.000 secs
+5268138 nodes reduced, score[x]=90, remaining size=32.653% t=106.521 secs, bp query cost 0.000 secs
+5279250 nodes reduced, score[x]=90, remaining size=32.511% t=106.660 secs, bp query cost 0.000 secs
+5290362 nodes reduced, score[x]=90, remaining size=32.369% t=106.826 secs, bp query cost 0.000 secs
+5301474 nodes reduced, score[x]=90, remaining size=32.227% t=106.963 secs, bp query cost 0.000 secs
+5312586 nodes reduced, score[x]=90, remaining size=32.085% t=107.119 secs, bp query cost 0.000 secs
+5323698 nodes reduced, score[x]=90, remaining size=31.943% t=107.281 secs, bp query cost 0.000 secs
+5334810 nodes reduced, score[x]=90, remaining size=31.801% t=107.426 secs, bp query cost 0.000 secs
+5345922 nodes reduced, score[x]=90, remaining size=31.659% t=107.571 secs, bp query cost 0.000 secs
+5357034 nodes reduced, score[x]=90, remaining size=31.517% t=107.726 secs, bp query cost 0.000 secs
+5368146 nodes reduced, score[x]=90, remaining size=31.375% t=107.867 secs, bp query cost 0.000 secs
+5379258 nodes reduced, score[x]=90, remaining size=31.233% t=108.005 secs, bp query cost 0.000 secs
+5390370 nodes reduced, score[x]=90, remaining size=31.091% t=108.146 secs, bp query cost 0.000 secs
+5401482 nodes reduced, score[x]=90, remaining size=30.949% t=108.285 secs, bp query cost 0.000 secs
+5412594 nodes reduced, score[x]=90, remaining size=30.807% t=108.442 secs, bp query cost 0.000 secs
+5423706 nodes reduced, score[x]=90, remaining size=30.665% t=108.584 secs, bp query cost 0.000 secs
+5434818 nodes reduced, score[x]=90, remaining size=30.523% t=108.723 secs, bp query cost 0.000 secs
+5445930 nodes reduced, score[x]=90, remaining size=30.381% t=108.871 secs, bp query cost 0.000 secs
+5457042 nodes reduced, score[x]=90, remaining size=30.238% t=109.025 secs, bp query cost 0.000 secs
+5468154 nodes reduced, score[x]=90, remaining size=30.096% t=109.197 secs, bp query cost 0.000 secs
+5479266 nodes reduced, score[x]=90, remaining size=29.954% t=109.341 secs, bp query cost 0.000 secs
+5490378 nodes reduced, score[x]=90, remaining size=29.812% t=109.483 secs, bp query cost 0.000 secs
+5501490 nodes reduced, score[x]=90, remaining size=29.670% t=109.640 secs, bp query cost 0.000 secs
+5512485 nodes reduced, score[x]=91, remaining size=29.530% t=110.230 secs, bp query cost 0.000 secs
+5523355 nodes reduced, score[x]=92, remaining size=29.391% t=110.889 secs, bp query cost 0.000 secs
+5534225 nodes reduced, score[x]=92, remaining size=29.252% t=111.061 secs, bp query cost 0.000 secs
+5544978 nodes reduced, score[x]=93, remaining size=29.114% t=111.699 secs, bp query cost 0.000 secs
+5555617 nodes reduced, score[x]=94, remaining size=28.978% t=112.509 secs, bp query cost 0.000 secs
+5566034 nodes reduced, score[x]=96, remaining size=28.845% t=113.507 secs, bp query cost 0.000 secs
+5576344 nodes reduced, score[x]=97, remaining size=28.713% t=114.243 secs, bp query cost 0.000 secs
+5586549 nodes reduced, score[x]=98, remaining size=28.583% t=115.259 secs, bp query cost 0.000 secs
+5596651 nodes reduced, score[x]=99, remaining size=28.454% t=115.494 secs, bp query cost 0.000 secs
+5606753 nodes reduced, score[x]=99, remaining size=28.325% t=115.641 secs, bp query cost 0.000 secs
+5616754 nodes reduced, score[x]=100, remaining size=28.197% t=116.248 secs, bp query cost 0.000 secs
+5626656 nodes reduced, score[x]=101, remaining size=28.070% t=116.997 secs, bp query cost 0.000 secs
+5636460 nodes reduced, score[x]=102, remaining size=27.945% t=117.614 secs, bp query cost 0.000 secs
+5646169 nodes reduced, score[x]=103, remaining size=27.821% t=118.772 secs, bp query cost 0.000 secs
+5655693 nodes reduced, score[x]=105, remaining size=27.699% t=119.602 secs, bp query cost 0.000 secs
+5665127 nodes reduced, score[x]=106, remaining size=27.578% t=120.539 secs, bp query cost 0.000 secs
+5674389 nodes reduced, score[x]=108, remaining size=27.460% t=121.405 secs, bp query cost 0.000 secs
+5683526 nodes reduced, score[x]=110, remaining size=27.343% t=122.422 secs, bp query cost 0.000 secs
+5692536 nodes reduced, score[x]=111, remaining size=27.228% t=123.036 secs, bp query cost 0.000 secs
+5701465 nodes reduced, score[x]=112, remaining size=27.114% t=123.672 secs, bp query cost 0.000 secs
+5710315 nodes reduced, score[x]=113, remaining size=27.001% t=124.512 secs, bp query cost 0.000 secs
+5719088 nodes reduced, score[x]=114, remaining size=26.889% t=126.190 secs, bp query cost 0.000 secs
+5727709 nodes reduced, score[x]=116, remaining size=26.778% t=127.654 secs, bp query cost 0.000 secs
+5736257 nodes reduced, score[x]=117, remaining size=26.669% t=128.874 secs, bp query cost 0.000 secs
+5744737 nodes reduced, score[x]=118, remaining size=26.561% t=130.585 secs, bp query cost 0.000 secs
+5753074 nodes reduced, score[x]=120, remaining size=26.454% t=132.056 secs, bp query cost 0.000 secs
+5761276 nodes reduced, score[x]=122, remaining size=26.349% t=133.980 secs, bp query cost 0.000 secs
+5 reduce finished, time=149.009s
+5769407 nodes reduced, score[x]=123, remaining size=26.245% t=135.355 secs, bp query cost 0.000 secs
+5777408 nodes reduced, score[x]=125, remaining size=26.143% t=137.253 secs, bp query cost 0.000 secs
+5785284 nodes reduced, score[x]=127, remaining size=26.042% t=139.208 secs, bp query cost 0.000 secs
+5793037 nodes reduced, score[x]=129, remaining size=25.943% t=141.072 secs, bp query cost 0.000 secs
+5800671 nodes reduced, score[x]=131, remaining size=25.846% t=142.945 secs, bp query cost 0.000 secs
+5808248 nodes reduced, score[x]=132, remaining size=25.749% t=144.431 secs, bp query cost 0.000 secs
+6 reduce finished, time=159.311s
+5815711 nodes reduced, score[x]=134, remaining size=25.653% t=146.014 secs, bp query cost 0.000 secs
+5823064 nodes reduced, score[x]=136, remaining size=25.559% t=147.794 secs, bp query cost 0.000 secs
+5830366 nodes reduced, score[x]=137, remaining size=25.466% t=148.951 secs, bp query cost 0.000 secs
+5837614 nodes reduced, score[x]=138, remaining size=25.373% t=150.502 secs, bp query cost 0.000 secs
+5844758 nodes reduced, score[x]=140, remaining size=25.282% t=151.936 secs, bp query cost 0.000 secs
+5851851 nodes reduced, score[x]=141, remaining size=25.191% t=153.077 secs, bp query cost 0.000 secs
+5858894 nodes reduced, score[x]=142, remaining size=25.101% t=154.146 secs, bp query cost 0.000 secs
+5865888 nodes reduced, score[x]=143, remaining size=25.012% t=154.961 secs, bp query cost 0.000 secs
+5872833 nodes reduced, score[x]=144, remaining size=24.923% t=155.929 secs, bp query cost 0.000 secs
+5879779 nodes reduced, score[x]=144, remaining size=24.834% t=156.177 secs, bp query cost 0.000 secs
+5886676 nodes reduced, score[x]=145, remaining size=24.746% t=157.081 secs, bp query cost 0.000 secs
+5893573 nodes reduced, score[x]=145, remaining size=24.658% t=157.317 secs, bp query cost 0.000 secs
+5900423 nodes reduced, score[x]=146, remaining size=24.570% t=158.284 secs, bp query cost 0.000 secs
+5907273 nodes reduced, score[x]=146, remaining size=24.483% t=158.531 secs, bp query cost 0.000 secs
+5914076 nodes reduced, score[x]=147, remaining size=24.396% t=159.472 secs, bp query cost 0.000 secs
+5920880 nodes reduced, score[x]=147, remaining size=24.309% t=159.811 secs, bp query cost 0.000 secs
+5927637 nodes reduced, score[x]=148, remaining size=24.222% t=160.681 secs, bp query cost 0.000 secs
+5934351 nodes reduced, score[x]=149, remaining size=24.137% t=161.958 secs, bp query cost 0.000 secs
+5940974 nodes reduced, score[x]=151, remaining size=24.052% t=163.464 secs, bp query cost 0.000 secs
+5947553 nodes reduced, score[x]=152, remaining size=23.968% t=164.344 secs, bp query cost 0.000 secs
+5954048 nodes reduced, score[x]=154, remaining size=23.885% t=165.921 secs, bp query cost 0.000 secs
+5960500 nodes reduced, score[x]=155, remaining size=23.802% t=167.346 secs, bp query cost 0.000 secs
+5966871 nodes reduced, score[x]=157, remaining size=23.721% t=168.752 secs, bp query cost 0.000 secs
+5973161 nodes reduced, score[x]=159, remaining size=23.641% t=170.419 secs, bp query cost 0.000 secs
+5979412 nodes reduced, score[x]=160, remaining size=23.561% t=171.509 secs, bp query cost 0.000 secs
+8 reduce finished, time=185.908s
+5985624 nodes reduced, score[x]=161, remaining size=23.481% t=173.130 secs, bp query cost 0.000 secs
+5991759 nodes reduced, score[x]=163, remaining size=23.403% t=174.250 secs, bp query cost 0.000 secs
+5997820 nodes reduced, score[x]=165, remaining size=23.325% t=175.932 secs, bp query cost 0.000 secs
+6003858 nodes reduced, score[x]=166, remaining size=23.248% t=177.295 secs, bp query cost 0.000 secs
+6009814 nodes reduced, score[x]=168, remaining size=23.172% t=178.869 secs, bp query cost 0.000 secs
+7 reduce finished, time=193.799s
+6015701 nodes reduced, score[x]=170, remaining size=23.097% t=180.423 secs, bp query cost 0.000 secs
+9 reduce finished, time=195.272s
+6021515 nodes reduced, score[x]=172, remaining size=23.022% t=181.976 secs, bp query cost 0.000 secs
+6027301 nodes reduced, score[x]=173, remaining size=22.948% t=183.428 secs, bp query cost 0.000 secs
+6033016 nodes reduced, score[x]=175, remaining size=22.875% t=184.775 secs, bp query cost 0.000 secs
+6038698 nodes reduced, score[x]=176, remaining size=22.803% t=185.717 secs, bp query cost 0.000 secs
+6044348 nodes reduced, score[x]=177, remaining size=22.730% t=186.710 secs, bp query cost 0.000 secs
+6049935 nodes reduced, score[x]=179, remaining size=22.659% t=188.224 secs, bp query cost 0.000 secs
+6055491 nodes reduced, score[x]=180, remaining size=22.588% t=189.151 secs, bp query cost 0.000 secs
+6061047 nodes reduced, score[x]=180, remaining size=22.517% t=189.377 secs, bp query cost 0.000 secs
+6066603 nodes reduced, score[x]=180, remaining size=22.446% t=189.715 secs, bp query cost 0.000 secs
+6072159 nodes reduced, score[x]=180, remaining size=22.375% t=190.030 secs, bp query cost 0.000 secs
+6077715 nodes reduced, score[x]=180, remaining size=22.304% t=190.438 secs, bp query cost 0.000 secs
+6083275 nodes reduced, score[x]=180, remaining size=22.233% t=191.067 secs, bp query cost 0.000 secs
+6088885 nodes reduced, score[x]=179, remaining size=22.161% t=191.954 secs, bp query cost 0.000 secs
+6094382 nodes reduced, score[x]=182, remaining size=22.091% t=193.266 secs, bp query cost 0.000 secs
+6099879 nodes reduced, score[x]=182, remaining size=22.021% t=193.928 secs, bp query cost 0.000 secs
+6105314 nodes reduced, score[x]=184, remaining size=21.951% t=195.422 secs, bp query cost 0.000 secs
+6110715 nodes reduced, score[x]=186, remaining size=21.882% t=196.940 secs, bp query cost 0.000 secs
+6116121 nodes reduced, score[x]=185, remaining size=21.813% t=197.132 secs, bp query cost 0.000 secs
+6121473 nodes reduced, score[x]=187, remaining size=21.745% t=198.074 secs, bp query cost 0.000 secs
+6126797 nodes reduced, score[x]=188, remaining size=21.676% t=199.298 secs, bp query cost 0.000 secs
+6132064 nodes reduced, score[x]=190, remaining size=21.609% t=200.604 secs, bp query cost 0.000 secs
+6137274 nodes reduced, score[x]=192, remaining size=21.543% t=201.990 secs, bp query cost 0.000 secs
+6142431 nodes reduced, score[x]=194, remaining size=21.477% t=203.466 secs, bp query cost 0.000 secs
+6147560 nodes reduced, score[x]=195, remaining size=21.411% t=204.466 secs, bp query cost 0.000 secs
+6152663 nodes reduced, score[x]=196, remaining size=21.346% t=205.307 secs, bp query cost 0.000 secs
+6157740 nodes reduced, score[x]=197, remaining size=21.281% t=206.560 secs, bp query cost 0.000 secs
+6162767 nodes reduced, score[x]=199, remaining size=21.217% t=207.775 secs, bp query cost 0.000 secs
+6167769 nodes reduced, score[x]=200, remaining size=21.153% t=209.168 secs, bp query cost 0.000 secs
+6172721 nodes reduced, score[x]=202, remaining size=21.089% t=210.234 secs, bp query cost 0.000 secs
+6177648 nodes reduced, score[x]=203, remaining size=21.026% t=211.043 secs, bp query cost 0.000 secs
+6182550 nodes reduced, score[x]=204, remaining size=20.964% t=212.380 secs, bp query cost 0.000 secs
+6187405 nodes reduced, score[x]=206, remaining size=20.902% t=213.731 secs, bp query cost 0.000 secs
+6192213 nodes reduced, score[x]=208, remaining size=20.840% t=215.134 secs, bp query cost 0.000 secs
+6196976 nodes reduced, score[x]=210, remaining size=20.779% t=216.508 secs, bp query cost 0.000 secs
+6201693 nodes reduced, score[x]=212, remaining size=20.719% t=217.881 secs, bp query cost 0.000 secs
+6206367 nodes reduced, score[x]=214, remaining size=20.659% t=219.139 secs, bp query cost 0.000 secs
+6210997 nodes reduced, score[x]=216, remaining size=20.600% t=220.472 secs, bp query cost 0.000 secs
+6215585 nodes reduced, score[x]=218, remaining size=20.541% t=221.735 secs, bp query cost 0.000 secs
+6220133 nodes reduced, score[x]=220, remaining size=20.483% t=223.022 secs, bp query cost 0.000 secs
+6224638 nodes reduced, score[x]=222, remaining size=20.426% t=224.454 secs, bp query cost 0.000 secs
+6229103 nodes reduced, score[x]=224, remaining size=20.369% t=225.783 secs, bp query cost 0.000 secs
+6233546 nodes reduced, score[x]=226, remaining size=20.312% t=227.036 secs, bp query cost 0.000 secs
+6237913 nodes reduced, score[x]=229, remaining size=20.256% t=228.607 secs, bp query cost 0.000 secs
+6242243 nodes reduced, score[x]=231, remaining size=20.201% t=229.992 secs, bp query cost 0.000 secs
+6246541 nodes reduced, score[x]=233, remaining size=20.146% t=231.423 secs, bp query cost 0.000 secs
+6250800 nodes reduced, score[x]=235, remaining size=20.091% t=232.769 secs, bp query cost 0.000 secs
+2 reduce finished, time=247.955s
+6255002 nodes reduced, score[x]=238, remaining size=20.038% t=234.272 secs, bp query cost 0.000 secs
+6259169 nodes reduced, score[x]=240, remaining size=19.984% t=235.742 secs, bp query cost 0.000 secs
+6263285 nodes reduced, score[x]=243, remaining size=19.932% t=237.264 secs, bp query cost 0.000 secs
+6267367 nodes reduced, score[x]=245, remaining size=19.879% t=238.766 secs, bp query cost 0.000 secs
+6271400 nodes reduced, score[x]=248, remaining size=19.828% t=240.425 secs, bp query cost 0.000 secs
+6275417 nodes reduced, score[x]=249, remaining size=19.777% t=241.399 secs, bp query cost 0.000 secs
+0 reduce finished, time=241.725s
+Reordering edges...
+3 reduce finished, time=263.855s
+1 reduce finished, time=339.701s
+4 reduce finished, time=461.008s
+0 Reduce finished, t=1264.275 secs
+n_core=1546361,m_core=898173009,node_rate=0.198,edge_rate=1.269
+1 Reduce finished, t=1278.112 secs
+n_core=1927460,m_core=1106402725,node_rate=0.246,edge_rate=2.016
+2 Reduce finished, t=1278.112 secs
+n_core=1042830,m_core=687296634,node_rate=0.133,edge_rate=1.126
+3 Reduce finished, t=1278.112 secs
+n_core=1175929,m_core=797626796,node_rate=0.157,edge_rate=0.987
+4 Reduce finished, t=1278.112 secs
+n_core=1292431,m_core=571131315,node_rate=0.173,edge_rate=1.017
+5 Reduce finished, t=1278.113 secs
+n_core=624799,m_core=176949839,node_rate=0.080,edge_rate=0.692
+6 Reduce finished, t=1278.113 secs
+n_core=744819,m_core=241781419,node_rate=0.096,edge_rate=0.700
+7 Reduce finished, t=1278.113 secs
+n_core=648597,m_core=257336834,node_rate=0.083,edge_rate=0.642
+8 Reduce finished, t=1278.113 secs
+n_core=778088,m_core=379071350,node_rate=0.100,edge_rate=0.716
+9 Reduce finished, t=1278.113 secs
+n_core=742260,m_core=431028996,node_rate=0.095,edge_rate=0.866
+global n=77449748, global m=5271699862, global_n_core = 10523574, global_m_core=5546798917, removed=36212771427, node_rate=0.135876, edge_rate=1.05218, removed_rate=6.86928
+5 Tree Label Computed, t=94.395 secs, maxdis=120, tree label size=4850.271 MB
+6 Tree Label Computed, t=106.252 secs, maxdis=120, tree label size=4686.601 MB
+7 Tree Label Computed, t=132.533 secs, maxdis=120, tree label size=5004.049 MB
+8 Tree Label Computed, t=118.767 secs, maxdis=120, tree label size=4720.067 MB
+Creating Tree...
+9 Tree Label Computed, t=118.683 secs, maxdis=120, tree label size=4538.754 MB
+Core tree constructed, maxh=677, maxdep=509, cnt_root=2034439, max_stree=35950, avg_rsize=104.968, t=22.148 secs
+Computing Tree Label...
+2 Tree Label Computed, t=92.852 secs, maxdis=120, tree label size=4502.795 MB
+4 Tree Label Computed, t=129.240 secs, maxdis=103, tree label size=5298.481 MB
+3 Tree Label Computed, t=87.591 secs, maxdis=120, tree label size=4356.160 MB
+0 Tree Label Computed, t=82.489 secs, maxdis=120, tree label size=3643.851 MB
+Block Initialization Time : 1959.486787 seconds
+1 Tree Label Computed, t=114.347 secs, maxdis=120, tree label size=3862.771 MB
+Superstep 1 done. Time elapsed: 0.000313997 seconds
+#bmsgs: 0
+Communication Time : 0.000189 seconds
+- Serialization Time : 0.000003 seconds
+- Transfer Time : 0.000181 seconds
+Total Computational Time : 0.000394 seconds
+Total #msgs=0
+Total #bmsgs=0
+Dump Time : 348.985365 seconds
